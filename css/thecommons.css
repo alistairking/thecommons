@@ -55,6 +55,7 @@ html {
     border: 5px solid #fff;
     font-size: 40px;
     display: inline-block;
+    background-color: transparent;
 }
 
 a,
