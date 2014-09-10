@@ -67,6 +67,10 @@ a:active {
     text-decoration: none;
 }
 
+.map-link:hover {
+    text-decoration: underline;
+}
+
 .info-text {
     line-height: 17px;
 }
