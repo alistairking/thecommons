@@ -2,17 +2,16 @@
  * Created by alistair on 9/7/14.
  */
 
-function initialize() {
-    var qbLatLong = new google.maps.LatLng(32.748934, -117.128582);
+var map;
+var qbLatLong = new google.maps.LatLng(32.748934, -117.128582);
 
+function initialize() {
     var mapOptions = {
         center: qbLatLong,
         zoom: 15,
-        zoomControl: false,
-        minZoom: 15,
-        maxZoom: 15
+        zoomControl: true
     };
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
     var marker = new google.maps.Marker({
         position: qbLatLong,
@@ -35,3 +34,7 @@ function initialize() {
     */
 }
 google.maps.event.addDomListener(window, 'load', initialize);
+
+google.maps.event.addDomListener(window, 'resize', function () {
+    map.setCenter(qbLatLong);
+});
