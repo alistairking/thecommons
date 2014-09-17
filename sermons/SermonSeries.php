@@ -9,22 +9,28 @@
 namespace TheCommons\Sermons;
 
 require_once('Sermon.php');
+require_once('../libs/spyc/Spyc.php');
 
 use JsonSerializable;
+use Spyc;
 
 class SermonSeries implements JsonSerializable {
 
     private $id;
-    private $name;
-    private $image;
+    private $path;
+    private $webPath;
+    private $title;
+    private $desc;
+    private $cover;
     private $video;
 
     private $sermons;
 
     public
-    function __construct($id, $path) {
+    function __construct($id, $path, $prefix) {
         $this->id = $id;
         $this->path = $path;
+        $this->webPath = $prefix . '/' . $id;
 
         $this->parseSeriesInfo($path);
         $this->populateSermons();
@@ -36,13 +42,31 @@ class SermonSeries implements JsonSerializable {
     }
 
     public
-    function getName() {
-        return $this->name;
+    function getPath()
+    {
+        return $this->path;
     }
 
     public
-    function getImage() {
-        return $this->image;
+    function getWebPath()
+    {
+        return $this->webPath;
+    }
+
+    public
+    function getTitle() {
+        return $this->title;
+    }
+
+    public
+    function getDesc()
+    {
+        return $this->desc;
+    }
+
+    public
+    function getCover() {
+        return $this->getWebPath() . '/' .$this->cover;
     }
 
     public
@@ -59,40 +83,43 @@ class SermonSeries implements JsonSerializable {
     public
     function parseSeriesInfo($path) {
         // find and parse the series.yml file
-        $this->name = 'Sample Series';
-        $this->image = 'Lion-LambWEB.jpg';
-        $this->video = 'http://vimeo.com/73640362';
+        // if there is no series.yml file...
+        // throw an exception
+        $seriesYml = Spyc::YAMLLoad($path . "/series.yml");
+
+        if(!$seriesYml || !$seriesYml['series-title']) {
+            throw new \InvalidArgumentException("Missing series.yml for " .
+                $path);
+        }
+
+        $this->title = $seriesYml['series-title'];
+        $this->desc = $seriesYml['series-desc'];
+        $this->cover = $seriesYml['series-cover'];
+        $this->video = $seriesYml['series-video'];
     }
 
     public
     function populateSermons() {
         $this->sermons = [];
 
-        foreach (glob('*', GLOB_ONLYDIR) as $sermonDir) {
+        foreach (glob($this->getPath() . '/*', GLOB_ONLYDIR) as $sermonDir) {
             if ($sermonDir == '.' || $sermonDir == '..') {
                 continue;
             }
             $id = basename($sermonDir);
 
-            $this->sermons[] = new Sermon($id, $sermonDir);
+            $this->sermons[] = new Sermon($id, $sermonDir,
+                $this->getWebPath());
         }
-
-        // create a series
-
-        // for each directory in <series-name>/
-
-        // find and parse the sermon.yml file
-
-        // create a sermon
     }
 
     public function jsonSerialize()
     {
         return [
-            'type' => 'sermons-series',
+            'type' => 'sermon-series',
             'id' => $this->getId(),
-            'name' => $this->getName(),
-            'image' => $this->getImage(),
+            'title' => $this->getTitle(),
+            'cover' => $this->getCover(),
             'video' => $this->getVideo(),
             'sermons' => $this->getSermons(),
         ];
