@@ -9,9 +9,11 @@
 namespace TheCommons\Sermons;
 
 require_once('SermonSeries.php');
+require_once('Sermon.php');
 require_once('../libs/spyc/Spyc.php');
 
 use JsonSerializable;
+use SimpleXMLElement;
 use Spyc;
 
 class Sermons implements JsonSerializable
@@ -19,7 +21,15 @@ class Sermons implements JsonSerializable
     private $mediaDir;
     private $webRoot;
     private $podcastTitle;
-    private $podcastCover;
+    private $podcastSubtitle;
+    private $podcastAuthor;
+    private $podcastImage;
+    private $podcastDescription;
+    private $podcastLink;
+    private $podcastLanguage;
+    private $podcastCopyright;
+    private $podcastCategory;
+
 
     private $series;
 
@@ -47,9 +57,51 @@ class Sermons implements JsonSerializable
     }
 
     public
-    function getPodcastCover()
+    function getPodcastSubtitle()
     {
-        return $this->getWebPrefix() . '/' . $this->podcastCover;
+        return $this->podcastSubtitle;
+    }
+
+    public
+    function getPodcastAuthor()
+    {
+        return $this->podcastAuthor;
+    }
+
+    public
+    function getPodcastImage()
+    {
+        return $this->getWebPrefix() . '/' . $this->podcastImage;
+    }
+
+    public
+    function getPodcastDescription()
+    {
+        return $this->podcastDescription;
+    }
+
+    public
+    function getPodcastLink()
+    {
+        return $this->podcastLink;
+    }
+
+    public
+    function getPodcastLanguage()
+    {
+        return $this->podcastLanguage;
+    }
+
+    public
+    function getPodcastCopyright()
+    {
+        return $this->podcastCopyright;
+    }
+
+    public
+    function getPodcastCategory()
+    {
+        return $this->podcastCategory;
     }
 
     public
@@ -69,7 +121,14 @@ class Sermons implements JsonSerializable
         $this->mediaDir = $yml['media-path'];
         $this->webRoot = $yml['public-media-path'];
         $this->podcastTitle = $yml['podcast-title'];
-        $this->podcastCover = $yml['podcast-cover'];
+        $this->podcastSubtitle = $yml['podcast-subtitle'];
+        $this->podcastAuthor = $yml['podcast-author'];
+        $this->podcastImage = $yml['podcast-image'];
+        $this->podcastDescription = $yml['podcast-description'];
+        $this->podcastLink = $yml['podcast-link'];
+        $this->podcastLanguage = $yml['podcast-language'];
+        $this->podcastCopyright = $yml['podcast-copyright'];
+        $this->podcastCategory = $yml['podcast-category'];
     }
 
     public
@@ -88,15 +147,109 @@ class Sermons implements JsonSerializable
         }
     }
 
+    /**
+     * @return SermonSeries
+     */
     public
     function getSeries() {
         return $this->series;
     }
 
+    private
+    function xmlEncode($str) {
+        $str = str_replace('&', '&amp;', $str);
+        $str = str_replace("'", '&apos;', $str);
+        $str = str_replace('"', '&quot;', $str);
+        // missing ' and "
+        return $str;
+    }
+
+    private
+    function addTag($xmlStr, $tagName, $content) {
+        if (!$xmlStr) {
+            $xmlStr = "";
+        }
+
+        $xmlStr .= '<'.$tagName.'>'.
+            $this->xmlEncode($content).
+            '</'.$tagName.'>';
+        return $xmlStr;
+    }
+
     public
     function getXml() {
-        // need to do fancier things and iterate over series etc
-        return 'boo';
+        // man, i really hate xml...
+
+        $xmlStr = '<?xml version="1.0" encoding="UTF-8"?>' .
+            '<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"' .
+            'version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">' .
+            '<channel>';
+
+        $xmlStr = $this->addTag($xmlStr, 'title', $this->getPodcastTitle());
+        $xmlStr = $this->addTag($xmlStr, 'itunes:subtitle',
+            $this->getPodcastSubtitle());
+        $xmlStr = $this->addTag($xmlStr, 'itunes:author',
+            $this->getPodcastAuthor());
+        $xmlStr = $this->addTag($xmlStr, 'itunes:image',
+            $this->getPodcastImage());
+        $xmlStr = $this->addTag($xmlStr, 'itunes:summary',
+            $this->getPodcastDescription());
+        $xmlStr = $this->addTag($xmlStr, 'link', $this->getPodcastLink());
+        $xmlStr = $this->addTag($xmlStr, 'language',
+            $this->getPodcastLanguage());
+        $xmlStr = $this->addTag($xmlStr, 'copyright',
+            $this->getPodcastCopyright());
+        $xmlStr = $this->addTag($xmlStr, 'itunes:explicit', 'no');
+        $xmlStr = $this->addTag($xmlStr, 'itunes:category',
+            $this->getPodcastCategory());
+
+        /** @var SermonSeries $series */
+        foreach ($this->getSeries() as $series) {
+            /** @var Sermon $sermon */
+            foreach ($series->getSermons() as $sermon) {
+                $xmlStr .= '<item>';
+
+                $xmlStr = $this->addTag($xmlStr, 'guid', $sermon->getAudio());
+                $xmlStr = $this->addTag($xmlStr, 'title', $sermon->getTitle());
+
+                // todo make this point to the sermon browser when it exists
+                $xmlStr = $this->addTag($xmlStr, 'link',
+                    $this->getPodcastLink());
+
+                $xmlStr = $this->addTag($xmlStr, 'itunes:author',
+                    $sermon->getAuthor());
+
+                $xmlStr = $this->addTag($xmlStr, 'description',
+                    '<![CDATA[' . $sermon->getDesc() . ']]>');
+
+                $xmlStr = $this->addTag($xmlStr, 'itunes:summary',
+                    '<![CDATA[' . $sermon->getDesc() . ']]>');
+
+                $xmlStr = $this->addTag($xmlStr, 'pubDate',
+                    date('r', $sermon->getTime()));
+
+                $xmlStr = $this->addTag($xmlStr, 'itunes:duration',
+                    $sermon->getAudioDuration());
+
+                $xmlStr .= '<enclosure url="'.$sermon->getAudio().'" '.
+                    'length="'. $sermon->getAudioBytes() .'" '.
+                    'type="'. $sermon->getAudioType() .'" />';
+
+                $xmlStr .= '</item>';
+            }
+        }
+
+        $xmlStr .= '</channel>' .
+            '</rss>';
+
+        // parsing to get the xml to be pretty-printed
+        $sxml = new \SimpleXMLElement($xmlStr);
+        $dom = new \DOMDocument('1.0');
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        $dom->loadXML($sxml->asXML());
+
+        return $dom->saveXML();
     }
 
     public function jsonSerialize()

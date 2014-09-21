@@ -75,6 +75,9 @@ class SermonSeries implements JsonSerializable {
         return $this->video;
     }
 
+    /**
+     * @return Sermon
+     */
     public
     function getSermons() {
         return $this->sermons;

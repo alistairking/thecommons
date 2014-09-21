@@ -19,7 +19,8 @@ class Sermon implements JsonSerializable
     private $path;
     private $webPath;
     private $title;
-    private $date;
+    private $author;
+    private $time;
     private $desc;
     private $audio;
 
@@ -58,15 +59,39 @@ class Sermon implements JsonSerializable
     }
 
     public
-    function getDate()
+    function getAuthor()
     {
-        return $this->date;
+        return $this->author;
+    }
+
+    public
+    function getTime()
+    {
+        return $this->time;
     }
 
     public
     function getAudio()
     {
         return $this->getWebPath() . '/' . $this->audio;
+    }
+
+    public
+    function getAudioDuration()
+    {
+        return 0;
+    }
+
+    public
+    function getAudioBytes()
+    {
+        return filesize($this->getPath() . '/' .$this->audio);
+    }
+
+    public
+    function getAudioType()
+    {
+        return 'audio/mpeg';
     }
 
     public
@@ -90,8 +115,9 @@ class Sermon implements JsonSerializable
 
         $this->title = $sermonYml['sermon-title'];
         $this->desc = $sermonYml['sermon-desc'];
-        $this->date = $sermonYml['sermon-date'];
+        $this->time = strtotime($sermonYml['sermon-time']);
         $this->audio = $sermonYml['sermon-audio'];
+        $this->author = $sermonYml['sermon-author'];
     }
 
     public function jsonSerialize()
@@ -100,7 +126,7 @@ class Sermon implements JsonSerializable
             'type' => 'sermon',
             'id' => $this->getId(),
             'title' => $this->getTitle(),
-            'date' => $this->getDate(),
+            'time' => $this->getTime(),
             'audio' => $this->getAudio(),
             'desc' => $this->getDesc(),
         ];

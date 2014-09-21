@@ -1,4 +1,11 @@
 podcast-title: The Commons Podcast
-podcast-cover: XXX.jpg
+podcast-author: The Commons
+podcast-subtitle: Sermons of Hope Church North Park. A community of faith in action.
+podcast-image: COMMONSpodcastimage.png
+podcast-description: Hope Church North Park is a community of faith in action serving the North Park neighborhood of San Diego. Connect to something greater. Live for something greater. www.hopechurchsandiego.com
+podcast-link: http://www.thecommonsforall.com
+podcast-language: en-us
+podcast-copyright:
+podcast-category: Religion & Spirituality
 media-path: media
-public-media-path: /sermons/media
+public-media-path: http://toward.thecommonsforall.com/sermons/media
