@@ -160,19 +160,22 @@ class Sermons implements JsonSerializable
         $str = str_replace('&', '&amp;', $str);
         $str = str_replace("'", '&apos;', $str);
         $str = str_replace('"', '&quot;', $str);
-        // missing ' and "
+        $str = str_replace('<', '&lt;', $str);
+        $str = str_replace('>', '&gt;', $str);
         return $str;
     }
 
     private
-    function addTag($xmlStr, $tagName, $content) {
+    function addTag($xmlStr, $tagName, $content, $encode=true) {
         if (!$xmlStr) {
             $xmlStr = "";
         }
 
-        $xmlStr .= '<'.$tagName.'>'.
-            $this->xmlEncode($content).
-            '</'.$tagName.'>';
+        if($encode) {
+            $content = $this->xmlEncode($content);
+        }
+
+        $xmlStr .= '<'.$tagName.'>'.$content.'</'.$tagName.'>';
         return $xmlStr;
     }
 
@@ -220,10 +223,10 @@ class Sermons implements JsonSerializable
                     $sermon->getAuthor());
 
                 $xmlStr = $this->addTag($xmlStr, 'description',
-                    '<![CDATA[' . $sermon->getDesc() . ']]>');
+                    '<![CDATA[' . $sermon->getDesc() . ']]>', false);
 
                 $xmlStr = $this->addTag($xmlStr, 'itunes:summary',
-                    '<![CDATA[' . $sermon->getDesc() . ']]>');
+                    '<![CDATA[' . $sermon->getDesc() . ']]>', false);
 
                 $xmlStr = $this->addTag($xmlStr, 'pubDate',
                     date('r', $sermon->getTime()));
