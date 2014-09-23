@@ -213,7 +213,8 @@ class Sermons implements JsonSerializable
                 $xmlStr .= '<item>';
 
                 $xmlStr = $this->addTag($xmlStr, 'guid', $sermon->getAudio());
-                $xmlStr = $this->addTag($xmlStr, 'title', $sermon->getTitle());
+                $xmlStr = $this->addTag($xmlStr, 'title',
+                    $series->getTitle() . ': ' . $sermon->getTitle());
 
                 // todo make this point to the sermon browser when it exists
                 $xmlStr = $this->addTag($xmlStr, 'link',
