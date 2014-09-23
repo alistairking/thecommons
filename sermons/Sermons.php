@@ -256,7 +256,14 @@ class Sermons implements JsonSerializable
     {
         return [
             'podcast-title' => $this->getPodcastTitle(),
-            'podcast-cover' => $this->getPodcastCover(),
+            'podcast-subtitle' => $this->getPodcastSubtitle(),
+            'podcast-author' => $this->getPodcastAuthor(),
+            'podcast-image' => $this->getPodcastImage(),
+            'podcast-desc' => $this->getPodcastDescription(),
+            'podcast-link' => $this->getPodcastLink(),
+            'podcast-language' => $this->getPodcastLanguage(),
+            'podcast-copyright'=> $this->getPodcastCopyright(),
+            'podcast-category' => $this->getPodcastCategory(),
             'series' => $this->getSeries(),
         ];
     }
