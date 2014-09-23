@@ -193,8 +193,7 @@ class Sermons implements JsonSerializable
             $this->getPodcastSubtitle());
         $xmlStr = $this->addTag($xmlStr, 'itunes:author',
             $this->getPodcastAuthor());
-        $xmlStr = $this->addTag($xmlStr, 'itunes:image',
-            $this->getPodcastImage());
+        $xmlStr .= '<itunes:image href="'. $this->getPodcastImage() .'"/>';
         $xmlStr = $this->addTag($xmlStr, 'itunes:summary',
             $this->getPodcastDescription());
         $xmlStr = $this->addTag($xmlStr, 'link', $this->getPodcastLink());
