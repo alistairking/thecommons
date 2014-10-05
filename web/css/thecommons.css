@@ -11,6 +11,10 @@ html {
     height: 100%;
 }
 
+.transition-tag {
+    margin-top: 10px;
+}
+
 .intro-bg {
     display: table;
     width: 100%;
