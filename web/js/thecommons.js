@@ -38,3 +38,14 @@ google.maps.event.addDomListener(window, 'load', initialize);
 google.maps.event.addDomListener(window, 'resize', function () {
     map.setCenter(qbLatLong);
 });
+
+var sidebar = $("#sidebar-wrapper");
+sidebar.mouseenter(function (e) {
+    e.preventDefault();
+    $("#wrapper").removeClass("toggled");
+});
+
+sidebar.mouseout(function (e) {
+    e.preventDefault();
+    $("#wrapper").addClass("toggled");
+});

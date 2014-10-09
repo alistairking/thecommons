@@ -8,6 +8,7 @@
           rel="stylesheet" media="screen">
     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css'
           rel='stylesheet'/>
+    <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/thecommons.css"
           rel="stylesheet" media="screen">
 
@@ -26,31 +27,73 @@
 
 <body>
 
-<div class="container-fluid intro-bg container-xs-height">
-    <div class="row row-xs-height">
-        <div class="col-md-12 logo-cell text-center">
-            <img src="img/tc-logo-gold.svg"
-                     style="width: 40%; height: 40%; vertical-align: middle"/>
+<div id="wrapper" class="toggled">
+
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li>
+                <a href="#">
+                    TC
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="sidebar-a-img">S</div>
+                    <div class="sidebar-a-text">Sunday Gathering</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">M</a>
+            </li>
+            <li>
+                <a href="#">S</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="page-content-wrapper">
+
+        <div class="container-fluid">
+            <div class="row intro-bg">
+                <div class="col-md-12 full-col no-pad">
+                    <div class="row logo-tag-row">
+                        <div class="col-md-6 logo-tag-cell no-pad">
+                            <p class="mission-text mission-text-top">Proclaim
+                                the Cross</p>
+                        </div>
+                        <div class="col-md-6 text-right no-pad">
+                            <p class="mission-text mission-text-top">Join the
+                                Movement</p>
+                        </div>
+                    </div>
+                    <div class="row logo-img-row">
+                        <div class="col-md-12 logo-img-cell text-center">
+                            <div class="logo-push hidden-xs"></div>
+                            <img class="logo-img" src="img/tc-logo-gold.svg"/>
+                        </div>
+                    </div>
+                    <div class="row logo-tag-row">
+                        <div class="col-md-6 logo-tag-cell no-pad">
+                            <p
+                                    class="mission-text mission-text-bottom">
+                                Cultivate Disciples
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-right logo-tag-cell no-pad">
+                            <p
+                                    class="mission-text mission-text-bottom text-right">
+                                Embrace the Oppressed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="map"></div>
+            </div>
         </div>
     </div>
-    <!--
-    <div class="row row-xs-height">
-        <div class="col-md-3 col-xs-height col-bottom">
-            Cultivate Disciples
-        </div>
-        <div class="col-md-3 col-xs-height col-bottom">
-            Proclaim the Cross
-        </div>
-        <div class="col-md-3 col-xs-height col-bottom">
-            Embrace the Oppressed
-        </div>
-        <div class="col-md-3 col-xs-height col-bottom">
-            Join the Movement
-        </div>
-    </div>
-    -->
 </div>
-<div id="map"></div>
 
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
