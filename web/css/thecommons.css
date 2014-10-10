@@ -31,6 +31,15 @@ html {
     height: 100%;
 }
 
+.half-row {
+    height: 50%;
+}
+
+.no-pad {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .intro-bg {
     width: 100%;
     background: url(../img/np-11-x3-faded.jpg) no-repeat bottom center scroll;
@@ -38,6 +47,23 @@ html {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.qb-bg {
+    background: url(../img/np-7-x3.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.wrench-img {
+    width: 80%;
+    height: 80%;
+}
+
+.white-bg {
+    background-color: #fff;
 }
 
 .logo-tag-row {
@@ -69,6 +95,16 @@ html {
     height: 100%;
 }
 
+.header-text {
+    font-size: 18px;
+    color: #d2ac2b;
+    text-transform: uppercase;
+}
+
+.middle {
+/* errrrrhgh */
+}
+
 .mission-text {
     margin: 0;
     padding-left: 5%;
@@ -84,11 +120,6 @@ html {
     bottom: 0;
     padding-bottom: 5%;
     width: 100%;
-}
-
-.no-pad {
-    padding-left: 0;
-    padding-right: 0;
 }
 
 @media (min-width: 768px) {
