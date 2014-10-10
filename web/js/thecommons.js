@@ -9,7 +9,8 @@ function initialize() {
     var mapOptions = {
         center: qbLatLong,
         zoom: 15,
-        zoomControl: true
+        zoomControl: true,
+        scrollwheel: false
     };
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
