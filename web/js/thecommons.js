@@ -40,13 +40,14 @@ google.maps.event.addDomListener(window, 'resize', function () {
     map.setCenter(qbLatLong);
 });
 
-var sidebar = $("#sidebar-wrapper");
-sidebar.mouseenter(function (e) {
+var sidebar_all = $("#sidebar-wrapper").find('*');
+sidebar_all = sidebar_all.add("#sidebar-wrapper");
+var page_content_all = $("#page-content-wrapper").find('*');
+sidebar_all.mouseenter(function (e) {
     e.preventDefault();
     $("#wrapper").removeClass("toggled");
 });
-
-sidebar.mouseout(function (e) {
+page_content_all.mouseenter(function (e) {
     e.preventDefault();
     $("#wrapper").addClass("toggled");
 });
