@@ -6,6 +6,7 @@ body {
     background-color: #231f20;
     font-family: 'futura-pt', sans-serif;
     font-weight: 700;/* heavy */
+    font-size: 16px;
 }
 
 html {
@@ -62,7 +63,7 @@ html {
     height: 80%;
 }
 
-.white-bg {
+.invert-bg {
     background-color: #fff;
 }
 
@@ -96,13 +97,26 @@ html {
 }
 
 .header-text {
-    font-size: 18px;
+    font-size: 20px;
     color: #d2ac2b;
     text-transform: uppercase;
 }
 
+.invert-text {
+    color: #231f20;
+}
+
+.middle-parent {
+    display: table;
+    table-layout: fixed;
+}
+
 .middle {
-/* errrrrhgh */
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .mission-text {
@@ -120,6 +134,10 @@ html {
     bottom: 0;
     padding-bottom: 5%;
     width: 100%;
+}
+
+.icon {
+    font-size: 30px;
 }
 
 @media (min-width: 768px) {
