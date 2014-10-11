@@ -40,14 +40,36 @@ google.maps.event.addDomListener(window, 'resize', function () {
     map.setCenter(qbLatLong);
 });
 
-var sidebar_all = $("#sidebar-wrapper").find('*');
-sidebar_all = sidebar_all.add("#sidebar-wrapper");
-var page_content_all = $("#page-content-wrapper").find('*');
-sidebar_all.mouseenter(function (e) {
+/* smooth scrolling on anchor jumps */
+$(function () {
+    var wrapperDiv = $('#page-content-wrapper');
+    $('a[href*=#]:not([href=#])').click(function (e) {
+        e.preventDefault();
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            var offset = target.offset().top + wrapperDiv.scrollTop();
+            if (target.length) {
+                wrapperDiv.stop().animate({
+                    scrollTop: offset
+                }, 100);
+                history.pushState({}, '', this.hash);
+                return false;
+            }
+        }
+        return true;
+    });
+});
+
+
+var sidebarAll = $("#sidebar-wrapper").find('*');
+sidebarAll = sidebarAll.add("#sidebar-wrapper");
+var pageContentAll = $("#page-content-wrapper").find('*');
+sidebarAll.mouseenter(function (e) {
     e.preventDefault();
     $("#wrapper").removeClass("toggled");
 });
-page_content_all.mouseenter(function (e) {
+pageContentAll.mouseenter(function (e) {
     e.preventDefault();
     $("#wrapper").addClass("toggled");
 });
