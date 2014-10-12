@@ -59,16 +59,6 @@ $(function () {
         }
         return true;
     });
-
-    var sidebarLinks = $('.sidebar-link').find('*');
-    sidebarLinks.add('.sidebar-link');
-    sidebarLinks.hover(
-        function() {
-            $(this).closest('li').find('*').addClass('sidebar-link-hover');
-        },
-        function() {
-            sidebarLinks.removeClass('sidebar-link-hover');
-        });
 });
 
 
