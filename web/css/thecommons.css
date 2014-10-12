@@ -21,6 +21,7 @@ html {
 }
 
 .row {
+    position: relative;
     height: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -28,10 +29,16 @@ html {
     margin-right: 0;
 }
 
-.full-col {
+.col-left {
     height: 100%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+}
+
+.col-right {
+    height: 100%;
+}
+
+.col-md-12 {
+    height: 100%;
 }
 
 .half-row {
@@ -104,6 +111,7 @@ html {
     color: #d2ac2b;
     text-transform: uppercase;
     font-weight: 700;/* heavy */
+    text-align: center;
 }
 
 .invert-text {
@@ -118,13 +126,12 @@ html {
 .middle {
     display: table-cell;
     vertical-align: middle;
+    padding: 5% 10% 5% 10%;
     text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
-.scrollable {
-    overflow-y: scroll;
+p {
+    text-align: justify;
 }
 
 .mission-text {
@@ -154,5 +161,23 @@ html {
     .logo-img {
         width: 45%;
         height: 45%;
+    }
+
+    .col-left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        overflow-y: scroll;
+    }
+
+    .col-right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+        overflow-y: scroll;
     }
 }
