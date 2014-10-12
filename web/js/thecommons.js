@@ -52,7 +52,7 @@ $(function () {
             if (target.length) {
                 wrapperDiv.stop().animate({
                     scrollTop: offset
-                }, 100);
+                }, 300);
                 history.pushState({}, '', this.hash);
                 return false;
             }
