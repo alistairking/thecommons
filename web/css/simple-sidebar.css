@@ -66,8 +66,8 @@
 }
 
 .sidebar-link:hover .sidebar-text,
-.sidebar-link:hover .sidebar-icon{
-    color: #d2ac2b !important;
+.sidebar-link:hover .sidebar-icon i{
+    color: #d2ac2b;
     -o-transition: .3s;
     -ms-transition: .3s;
     -moz-transition: .3s;
@@ -86,8 +86,12 @@
     width: 100px;
 }
 
-.sidebar-icon span {
-    font-size: 25px;
+.sidebar-brand i {
+    font-size: 40px;
+}
+
+.sidebar-icon i {
+    font-size: 30px;
     color: #fff;
 }
 
@@ -98,6 +102,11 @@
     font-size: 20px;
     text-transform: uppercase;
     vertical-align: middle;
+}
+
+.active .sidebar-icon i,
+.active .sidebar-text {
+    color: #d2ac2b;
 }
 
 @media(min-width:768px) {

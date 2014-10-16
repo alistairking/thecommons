@@ -4,8 +4,12 @@
 
 /* smooth scrolling on anchor jumps */
 $(function () {
+    /* set the current hash as active */
+    $('a[href="'+location.hash+'"]').addClass("active");
+
     var wrapperDiv = $('#page-content-wrapper');
-    $('a[href*=#]:not([href=#])').click(function (e) {
+    var anchorLinks = $('a[href*=#]:not([href=#])');
+    anchorLinks.click(function (e) {
         e.preventDefault();
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
@@ -16,6 +20,8 @@ $(function () {
                     scrollTop: offset
                 }, 300);
                 history.pushState({}, '', this.hash);
+                anchorLinks.removeClass("active");
+                $(this).addClass("active");
                 return false;
             }
         }
