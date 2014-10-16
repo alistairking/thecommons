@@ -6,7 +6,7 @@ body {
     background-color: #231f20;
     font-family: 'futura-pt', sans-serif;
     /*font-weight: 700;*//* heavy */
-    font-size: 18px;
+    font-size: 20px;
 }
 
 html {
@@ -22,23 +22,24 @@ html {
 
 .row {
     position: relative;
-    height: 100%;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
 }
 
-.col-left {
-    height: 100%;
-}
-
-.col-right {
+.full-row {
     height: 100%;
 }
 
 .col-md-12 {
     height: 100%;
+    padding: 5% 5% 5% 5%;
+}
+
+.col-md-6 {
+    height: 100%;
+    padding: 5% 5% 5% 5%;
 }
 
 .half-row {
@@ -46,8 +47,11 @@ html {
 }
 
 .no-pad {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
 }
 
 .intro-bg {
@@ -60,11 +64,12 @@ html {
 }
 
 .qb-bg {
-    background: url(../img/np-7-x3.jpg) no-repeat bottom center scroll;
+    background: url(../img/np-7-x3-tall.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-position: center bottom;
 }
 
 .wrench-img {
@@ -105,13 +110,36 @@ html {
     height: 100%;
 }
 
+.underline {
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 3px solid;
+    border-color: #d2ac2b;
+}
+
+.divider {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid;
+    border-color: #d2ac2b;
+}
+
+.divider-invert {
+    border-color: #000;
+}
+
 .header-text {
-    padding-top: 20px;
     font-size: 20px;
     color: #d2ac2b;
     text-transform: uppercase;
     font-weight: 700;/* heavy */
-    text-align: center;
+    vertical-align: middle;
+}
+
+.header-inline {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .invert-text {
@@ -126,16 +154,29 @@ html {
 .middle {
     display: table-cell;
     vertical-align: middle;
-    padding: 5% 10% 5% 10%;
     text-align: center;
 }
 
 p {
-    text-align: justify;
+    font-size: 20px;
+}
+
+.invert-text a {
+    color: #231f20;
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+a > span {
+    display: inline-block;
+    border-bottom: 1px solid black;
 }
 
 .mission-text {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 700; /* heavy */
     margin: 0;
     padding-left: 5%;
@@ -157,27 +198,44 @@ p {
     font-size: 30px;
 }
 
+.icon-inline {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.staff-col {
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.staff-img {
+    margin-bottom: 15px;
+}
+
+.staff-name {
+    color: #231f20;
+    font-weight: 700; /* heavy */
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+
+.staff-role {
+    color: #231f20;
+    font-size: 16px;
+    font-style: italic;
+}
+
 @media (min-width: 768px) {
     .logo-img {
         width: 45%;
         height: 45%;
     }
 
-    .col-left {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
+    .underline {
         width: 50%;
-        overflow-y: scroll;
     }
 
-    .col-right {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
+    .divider {
         width: 50%;
-        overflow-y: scroll;
     }
 }
