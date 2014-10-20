@@ -72,7 +72,18 @@ html {
     background-position: center bottom;
 }
 
-.wrench-img {
+.mission-img {
+    display: table;
+    table-layout: fixed;
+}
+
+.mission-img div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.mission-img img {
     width: 50%;
     height: 50%;
 }
