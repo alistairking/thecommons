@@ -228,6 +228,10 @@ a.text-link > span {
     margin-right: 10px;
 }
 
+.row.staff {
+    height: auto !important;
+}
+
 .staff-col {
     padding-left: 0;
     padding-right: 15px;
