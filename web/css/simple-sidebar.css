@@ -87,12 +87,12 @@
     width: 100px;
 }
 
-.sidebar-brand i {
-    font-size: 40px;
+.sidebar-icon.brand i {
+    font-size: 34px;
 }
 
 .sidebar-icon i {
-    font-size: 30px;
+    font-size: 28px;
     color: #fff;
 }
 

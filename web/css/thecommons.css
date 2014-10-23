@@ -32,11 +32,6 @@ html {
     height: 100%;
 }
 
-.row.footer {
-    height: 30%;
-    background-color: #d2ac2b;
-}
-
 .col-md-12 {
     height: 100%;
     padding: 5% 5% 5% 5%;
@@ -107,7 +102,7 @@ html {
     color: #d2ac2b;
     font-size: 18px;
     text-transform: uppercase;
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .logo-img-row {
@@ -144,6 +139,10 @@ html {
 
 .underline.invert {
     border-color: #231f20;
+}
+
+.underline.white {
+    border-color: #fff;
 }
 
 .divider {
@@ -210,6 +209,7 @@ a.text-link > span {
     margin: 0;
     padding-left: 5%;
     padding-right: 5%;
+    color: #c49a6c;
 }
 
 .mission-text-top {
@@ -249,7 +249,7 @@ a.text-link > span {
     color: #231f20;
     font-weight: 700; /* heavy */
     font-size: 16px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .staff-role {
@@ -258,50 +258,87 @@ a.text-link > span {
     font-style: italic;
 }
 
+/* MISSION */
+
+#mission .body-text {
+    margin-bottom: 30px;
+}
+
 .series-nav {
-    color: #d2ac2b;
+    color: #FFF;
+}
+
+.series-bg {
+    background: url(../img/tmp/Commons-EVOL-BG.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    overflow: hidden;
+}
+
+.series-header.row {
+    height: auto;
 }
 
 .sermon {
     margin-bottom: 30px;
 }
 
-.sermon .row {
+.sermon .row .sermon-info {
+    display: inline-block;
+}
+
+.sermon .sermon-info .row p {
     text-transform: uppercase;
     font-weight: 700; /* heavy */
-    font-size: 20px;
-
+    font-size: 16px;
 }
 
 .sermon .title {
     color: #d2ac2b;
 }
 
-.sermon .title .icon {
+.sermon .title i {
     font-size: 20px;
 }
 
-.sermon .date {
+.sermon .sermon-date {
+    background-color: #231f20;
     color: #231f20;
+    display: inline-block;
+    float: left;
+    width: 50px;
+    height: 50px;
 }
 
 .sermon .description {
     color: #231f20;
+    font-size: 16px;
+}
+
+.footer {
+    height: 200px;
+    background-color: #d2ac2b;
+}
+
+.footer .row {
+    height: 33px;
 }
 
 .footer .col-md-4 {
-    display: table;
-    table-layout: fixed;
+    padding-top: 34px;
+    padding-bottom: 34px;
 }
 
-.footer .col-md-4 div {
-    display: table-cell;
-    vertical-align: middle;
+.footer img {
+    height: 132px;
+    max-height: 132px;
 }
 
-.footer .col-md-4 div img {
-    max-width: 70%;
-    max-height: 70%;
+.footer p {
+    font-size: 16px;
+    margin: 0;
 }
 
 .footer-left {
