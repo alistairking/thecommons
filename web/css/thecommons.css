@@ -45,7 +45,11 @@ html {
 .col-md-6 {
     height: 100%;
     padding: 5% 5% 5% 5%;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+.col-md-4 {
+    height: 100%;
 }
 
 .half-row {
@@ -254,7 +258,6 @@ a.text-link > span {
     font-style: italic;
 }
 
-/* @todo fix with appropriate classes/js */
 .series-nav {
     color: #d2ac2b;
 }
@@ -284,6 +287,39 @@ a.text-link > span {
 
 .sermon .description {
     color: #231f20;
+}
+
+.footer .col-md-4 {
+    display: table;
+    table-layout: fixed;
+}
+
+.footer .col-md-4 div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.footer .col-md-4 div img {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.footer-left {
+    text-align: left;
+    padding-left: 5%;
+}
+
+.footer-middle {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+    padding-right: 5%;
+}
+
+.white-text {
+    color: #fff;
 }
 
 @media (min-width: 768px) {
