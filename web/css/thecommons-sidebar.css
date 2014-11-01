@@ -5,6 +5,8 @@
     bottom: 0;
     z-index: 1030;
 
+    padding-top: 15px;
+
     background-color: #231f20;
     overflow-x: hidden;
 
@@ -20,43 +22,40 @@
 .tc-sidebar:focus,
 .tc-sidebar .nav > li {
     width: 360px;
+    margin: 0;
 }
 
-.tc-sidebar .nav > li {
+/* all links */
+.tc-sidebar .nav > li,
+.tc-sidebar .nav > li > a {
+    padding: 0;
     height: 70px;
+    display: table;
+    table-layout: fixed;
 }
 
-.tc-sidebar .nav > li > a > i.icon {
-    width: 100px;
-    display: inline-block;
+/* non-active link */
+.tc-sidebar .nav > li > a > div {
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
-
+    color: #514C4D;
+}
+.tc-sidebar .nav > li > a > .icon {
+    width: 100px;
     font-size: 28px;
 }
-
-/* normal, non-active link */
-.tc-sidebar .nav > li > a {
-    padding-left: 0;
-
-    color: #514C4D;
-
+.tc-sidebar .nav > li > a > .text {
     font-family: 'futura-pt', sans-serif;
     font-weight: 700; /* heavy */
     font-size: 20px;
     text-transform: uppercase;
 }
 
-/* active link */
-.tc-sidebar .nav-pills > li.active > a,
-.tc-sidebar .nav-pills > li.active > a:hover,
-.tc-sidebar .nav-pills > li.active > a:focus {
-    color: #d2ac2b;
-    background-color: transparent;
-}
-
-/* hover link */
-.tc-sidebar .nav > li > a:hover,
-.tc-sidebar .nav > li > a:focus {
+/* non-active link, on hover */
+.tc-sidebar .nav > li > a,
+.tc-sidebar .nav > li > a:hover div,
+.tc-sidebar .nav > li > a:focus div {
     background-color: transparent;
     color: #d2ac2b;
 
@@ -67,17 +66,28 @@
     transition: color .3s;
 }
 
-.tc-sidebar .nav > li.brand {
-    margin-top: 20px;
+/* active link (hover is no change) */
+.tc-sidebar .nav > li.active > a,
+.tc-sidebar .nav > li.active > a > div,
+.tc-sidebar .nav > li.active > a:hover > div,
+.tc-sidebar .nav > li.active > a:focus > div {
+    color: #d2ac2b;
+    background-color: transparent;
 }
 
-.tc-sidebar .nav > li.brand > a > i.icon {
-    font-size: 34px;
+.tc-sidebar .nav > li.brand,
+.tc-sidebar .nav > li.brand > a{
+
 }
 
-.tc-sidebar .nav > li.brand > a > img {
-    width: 232px;
+.tc-sidebar .nav > li.brand > a > .icon {
+    font-size: 44px;
 }
+
+.tc-sidebar .nav > li.brand > a > .text {
+    font-size: 16px;
+}
+
 
 @media (min-width: 768px) {
 
