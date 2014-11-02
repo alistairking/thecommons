@@ -8,7 +8,7 @@ $(function () {
     $('.tc-sidebar li > a[href="'+location.hash+'"]').parent().addClass("active");
 
     var body = $('html body');
-    var anchorLinks = $('.tc-sidebar a[href*=#]:not([href=#])');
+    var anchorLinks = $('.tc-sidebar a[href*=#]:not([href=#give])');
     anchorLinks.click(function (e) {
         e.preventDefault();
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
