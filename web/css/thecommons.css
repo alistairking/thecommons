@@ -317,46 +317,59 @@ a.text-link > span {
     font-size: 16px;
 }
 
-.footer {
+#footer {
     height: 200px;
     background-color: #d2ac2b;
 }
 
-.footer .row {
-    height: 33px;
-}
-
-.footer .col-md-4 {
+#footer > .col-left,
+#footer > .col-middle,
+#footer > .col-right {
     padding-top: 34px;
     padding-bottom: 34px;
 }
 
-.footer img {
-    height: 132px;
-    max-height: 132px;
-}
-
-.footer p {
-    font-size: 16px;
-    margin: 0;
-}
-
-.footer-left {
+#footer > .col-left {
     text-align: left;
     padding-left: 5%;
 }
 
-.footer-middle {
+#footer > .col-middle {
     text-align: center;
 }
 
-.footer-right {
+#footer > .col-right {
     text-align: right;
     padding-right: 5%;
 }
 
-.white-text {
+/* hax to get p elements to be v-align middle */
+#footer > .col-md-4 > .row {
+    width: 100%;
+    height: 33px;
+    display: table;
+    table-layout: fixed;
+}
+#footer > .col-md-4 > .row > p {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#footer > .col-middle img {
+    height: 132px;
+    max-height: 132px;
+}
+
+#footer > .col-md-4 a,
+#footer > .col-md-4 a:hover,
+#footer > .col-md-4 a:visited,
+#footer > .col-md-4 a:focus,
+#footer > .col-md-4 p {
     color: #fff;
+    font-size: 16px;
+    margin: 0;
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {
