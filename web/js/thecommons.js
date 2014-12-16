@@ -5,7 +5,8 @@
 /* smooth scrolling on anchor jumps */
 $(function () {
     /* set the current hash as active */
-    $('.tc-sidebar li > a[href="'+location.hash+'"]').parent().addClass("active");
+    var currentPage = location.hash ? location.hash : '#home';
+    $('.tc-sidebar li > a[href="'+currentPage+'"]').parent().addClass("active");
 
     var body = $('html body');
     var anchorLinks = $('.tc-sidebar a[href*=#]:not([href=#give])');

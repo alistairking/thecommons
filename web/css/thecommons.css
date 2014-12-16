@@ -372,6 +372,14 @@ a.text-link > span {
     text-decoration: none;
 }
 
+.paypal-footer {
+    vertical-align: middle;
+}
+
+.paypal-methods {
+    width: 160px;
+}
+
 @media (min-width: 768px) {
     .logo-img {
         width: 45%;
