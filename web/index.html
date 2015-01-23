@@ -4,7 +4,7 @@
     <title>The Commons</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
           rel="stylesheet" media="screen">
     <link href="libs/fontello/css/thecommons.css"
           rel="stylesheet" media="screen">
@@ -30,12 +30,12 @@
 
 <body>
 
-<div class="tc-topbar visible-xs">
+<div class="tc-topbar visible-xs text-right">
     <div class="tc-sidebar-toggle">
-        <i class="icon-commons-logo-mark"></i>
+        <span class="tc-sidebar-toggle-icon glyphicon glyphicon-menu-hamburger"></span>
     </div>
 </div>
-<div class="tc-sidebar hidden-xs">
+<div class="tc-sidebar tc-sidebar-hidden">
     <ul class="nav nav-pills nav-stacked">
         <li class="brand">
             <a href="#home">
@@ -67,6 +67,7 @@
                 </div>
             </a>
         </li>
+        <!--
         <li>
             <a href="#sermons">
                 <div class="icon">
@@ -77,6 +78,7 @@
                 </div>
             </a>
         </li>
+        -->
         <li>
             <a href="#give" data-toggle="modal">
                 <div class="icon">
@@ -91,22 +93,22 @@
 </div>
 
 <div class="container-fluid">
-<div class="row full-row intro-bg" id="home">
-    <div class="col-md-12 no-pad">
-        <div class="row full-row logo-tag-row">
-            <div class="col-md-6 logo-tag-cell no-pad">
+<div class="row intro-bg" id="home">
+    <div class="col-sm-12 no-pad">
+        <div class="row logo-tag-row hidden-xs">
+            <div class="col-sm-6 logo-tag-cell no-pad">
                 <p class="mission-text mission-text-top">
                     Proclaim the Cross
                 </p>
             </div>
-            <div class="col-md-6 text-right no-pad">
+            <div class="col-sm-6 text-right no-pad">
                 <p class="mission-text mission-text-top text-right">
                     Join the Movement
                 </p>
             </div>
         </div>
-        <div class="row full-row logo-img-row">
-            <div class="col-md-12 logo-img-cell
+        <div class="row logo-img-row">
+            <div class="col-sm-12 logo-img-cell
                         text-center no-pad middle-parent">
                 <div class="middle">
                     <img class="logo-img"
@@ -114,13 +116,13 @@
                 </div>
             </div>
         </div>
-        <div class="row full-row logo-tag-row">
-            <div class="col-md-6 logo-tag-cell no-pad">
+        <div class="row logo-tag-row hidden-xs">
+            <div class="col-sm-6 logo-tag-cell no-pad">
                 <p class="mission-text mission-text-bottom">
                     Cultivate Disciples
                 </p>
             </div>
-            <div class="col-md-6 text-right logo-tag-cell no-pad">
+            <div class="col-sm-6 text-right logo-tag-cell no-pad">
                 <p class="mission-text mission-text-bottom text-right">
                     Embrace the Oppressed
                 </p>
@@ -128,8 +130,8 @@
         </div>
     </div>
 </div>
-<div class="row full-row" id="sundays">
-    <div class="col-md-6 qb-bg">
+<div class="row" id="sundays">
+    <div class="col-sm-6 qb-bg">
         <div class="underline">
             <p class="header-text">
                 Our Gathering
@@ -158,8 +160,9 @@
             Sunday gathering: Worship, Preaching, Prayer, and
             Communion.
         </p>
+        <div class="qb-spacer"></div>
     </div>
-    <div class="col-md-6 invert-bg">
+    <div class="col-sm-6 invert-bg">
         <div class="header-text invert-text">
             <i class="icon icon-inline icon-commons-childrens"></i>
             <p class="header-inline">
@@ -182,7 +185,7 @@
             </p>
         </div>
         <div class="row staff">
-            <div class="col-md-3 staff-col">
+            <div class="col-sm-4 staff-col">
                 <div class="staff-img">
                     <img src="img/staff/jon-nichols.jpg"
                          class="img-responsive">
@@ -194,7 +197,7 @@
                     Lead/Teaching Pastor
                 </p>
             </div>
-            <div class="col-md-3 staff-col">
+            <div class="col-sm-4 staff-col">
                 <div class="staff-img">
                     <img src="img/staff/jeremey-glazier.jpg"
                          class="img-responsive">
@@ -233,8 +236,8 @@
         -->
     </div>
 </div>
-<div class="row full-row" id="mission">
-    <div class="col-md-6">
+<div class="row" id="mission">
+    <div class="col-sm-6">
         <p class="header-text">
             <i class="icon icon-commons-mission">
             </i>
@@ -328,23 +331,24 @@
         </p>
         -->
     </div>
-    <div class="col-md-6 no-pad mission-img">
+    <div class="col-sm-6 no-pad mission-img hidden-xs">
         <div>
             <img src="img/tc-logo-mark-gold.svg"/>
         </div>
     </div>
 </div>
-<div class="row full-row" id="sermons">
-    <div class="col-md-6 series-bg">
+<!--
+<div class="row" id="sermons">
+    <div class="col-sm-6 series-bg">
         <div class="row series-header">
-            <div class="col-md-6 no-pad">
+            <div class="col-sm-6 no-pad">
                 <div class="underline white full">
                     <p class="header-text white-text">
                         Sermon Series
                     </p>
                 </div>
             </div>
-            <div class="col-md-6 no-pad text-right header-text">
+            <div class="col-sm-6 no-pad text-right header-text">
                 <a class="series-nav" href="#series-prev">
                     <i class="icon icon-angle-left"></i>
                 </a>
@@ -354,12 +358,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 no-pad">
+            <div class="col-sm-12 no-pad">
                 <img src="img/tmp/Commons-EVOL-Title.png"/>
             </div>
         </div>
     </div>
-    <div class="col-md-6 invert-bg">
+    <div class="col-sm-6 invert-bg">
         <div class="header-text invert-text underline full invert">
             <p>
                 EVOL: A Message Series at The Commons
@@ -391,8 +395,9 @@
 
     </div>
 </div>
+-->
 <div class="row" id="footer">
-    <div class="col-md-4 col-left">
+    <div class="col-sm-4 col-left">
         <div class="row">
             <a class="header-text"
                href="http://www.facebook.com/thecommonsforall"
@@ -418,12 +423,12 @@
             </a>
         </div>
     </div>
-    <div class="col-md-4 col-middle">
+    <div class="col-sm-4 col-middle hidden-xs">
         <div>
             <img src="img/tc-logo.svg"/>
         </div>
     </div>
-    <div class="col-md-4 col-right">
+    <div class="col-sm-4 col-right hidden-xs">
         <div class="row">
             <p class="header-text">
                 Proclaim The Cross

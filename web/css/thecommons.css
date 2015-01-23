@@ -29,21 +29,20 @@ html {
 }
 
 .row {
-    height: 100%;
+    height: auto;
 }
 
-.col-md-12 {
+.col-sm-12 {
+    height: 100%;
+    padding: 5% 5% 5% 5%;
+}
+
+.col-sm-6 {
     height: 100%;
     padding: 5% 5% 5% 5%;
 }
 
-.col-md-6 {
-    height: 100%;
-    padding: 5% 5% 5% 5%;
-    overflow-y: auto;
-}
-
-.col-md-4 {
+.col-sm-4 {
     height: 100%;
 }
 
@@ -51,21 +50,19 @@ html {
     height: 50%;
 }
 
-.no-pad {
-    padding: 0;
-}
-
 .no-margin {
     margin: 0;
 }
 
 .intro-bg {
+    height: 100%;
     width: 100%;
     background: url(../img/np-11-x3-faded.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    padding-top: 60px;
 }
 
 .qb-bg {
@@ -75,6 +72,10 @@ html {
     background-size: cover;
     -o-background-size: cover;
     background-position: center bottom;
+}
+
+.qb-spacer {
+    height: 320px;
 }
 
 .mission-img {
@@ -98,7 +99,7 @@ html {
 }
 
 .logo-tag-row {
-    height: 10%;
+    height: 100% !important;
     color: #d2ac2b;
     font-size: 18px;
     text-transform: uppercase;
@@ -106,7 +107,9 @@ html {
 }
 
 .logo-img-row {
-    height: 80%;
+    height: 100% !important;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .logo-img-cell {
@@ -344,13 +347,13 @@ a.text-link > span {
 }
 
 /* hax to get p elements to be v-align middle */
-#footer > .col-md-4 > .row {
+#footer > .col-sm-4 > .row {
     width: 100%;
     height: 33px;
     display: table;
     table-layout: fixed;
 }
-#footer > .col-md-4 > .row > p {
+#footer > .col-sm-4 > .row > p {
     width: 100%;
     display: table-cell;
     vertical-align: middle;
@@ -361,11 +364,11 @@ a.text-link > span {
     max-height: 132px;
 }
 
-#footer > .col-md-4 a,
-#footer > .col-md-4 a:hover,
-#footer > .col-md-4 a:visited,
-#footer > .col-md-4 a:focus,
-#footer > .col-md-4 p {
+#footer > .col-sm-4 a,
+#footer > .col-sm-4 a:hover,
+#footer > .col-sm-4 a:visited,
+#footer > .col-sm-4 a:focus,
+#footer > .col-sm-4 p {
     color: #fff;
     font-size: 16px;
     margin: 0;
@@ -381,9 +384,27 @@ a.text-link > span {
 }
 
 @media (min-width: 768px) {
+    .row {
+        height: 100%;
+    }
+
+    .intro-bg {
+        padding-top: 0 !important;
+    }
+
     .logo-img {
         width: 45%;
         height: 45%;
+    }
+
+    .logo-tag-row {
+        height: 10% !important;
+    }
+
+    .logo-img-row {
+        height: 80% !important;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .underline {
@@ -392,5 +413,9 @@ a.text-link > span {
 
     .divider {
         width: 50%;
+    }
+
+    .no-pad {
+        padding: 0;
     }
 }
