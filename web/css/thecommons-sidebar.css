@@ -1,3 +1,14 @@
+.tc-topbar {
+    height: 60px;
+    background-color: #231f20;
+    padding-left: 5%;
+}
+
+.tc-sidebar-toggle {
+    font-size: 40px;
+    color: #d2ac2b;
+}
+
 .tc-sidebar {
     position: fixed;
     top: 0;
