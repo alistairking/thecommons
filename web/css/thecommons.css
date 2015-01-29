@@ -497,6 +497,62 @@ a.text-link > span {
     background: none;
 }
 
+/* same-height columns */
+/* columns of same height styles */
+.container-xs-height {
+    display: table;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row-xs-height {
+    display: table;
+    width: 100%;
+}
+
+.col-xs-height {
+    display: table-cell;
+    float: none !important;
+}
+
+@media (min-width: 768px) {
+    .row-sm-height {
+        display: table;
+        width: 100%;
+    }
+
+    .col-sm-height {
+        display: table-cell;
+        float: none !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .row-md-height {
+        display: table;
+        width: 100%;
+    }
+
+    .col-md-height {
+        display: table-cell;
+        float: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .row-lg-height {
+        display: table;
+        width: 100%;
+    }
+
+    .col-lg-height {
+        display: table-cell;
+        float: none !important;
+    }
+}
+
+/* END same-height columns */
+
 @media (min-width: 768px) {
     .container-fluid > .row {
         min-height: 100%;
