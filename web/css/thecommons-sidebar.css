@@ -4,9 +4,13 @@
     left: 0;
     right: 0;
     z-index: 1030;
-    height: 60px;
     background-color: #231f20;
     padding-right: 5%;
+}
+
+.tc-topbar,
+.tc-topbar-pad {
+    height: 60px;
 }
 
 .tc-sidebar-toggle {
@@ -129,7 +133,8 @@
 
 @media (min-width: 768px) {
 
-    .tc-topbar {
+    .tc-topbar,
+    .tc-topbar-pad {
         height: 0;
     }
 
