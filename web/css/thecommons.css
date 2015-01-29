@@ -33,6 +33,11 @@ html {
     height: auto;
 }
 
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .col-sm-12 {
     height: 100%;
     padding: 5% 5% 2% 5%;
