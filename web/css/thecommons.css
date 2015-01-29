@@ -20,26 +20,27 @@ html {
     padding-right: 0;
 }
 
-.row {
+.container-fluid > .row {
     position: relative;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
+    overflow: visible;
 }
 
-.row {
+.container-fluid > .row {
     height: auto;
 }
 
 .col-sm-12 {
     height: 100%;
-    padding: 5% 5% 5% 5%;
+    padding: 5% 5% 2% 5%;
 }
 
 .col-sm-6 {
     height: 100%;
-    padding: 5% 5% 5% 5%;
+    padding: 5% 5% 2% 5%;
 }
 
 .col-sm-4 {
@@ -165,6 +166,14 @@ html {
     color: #d2ac2b;
     text-transform: uppercase;
     font-weight: 700;/* heavy */
+    vertical-align: middle;
+}
+
+.hero-text {
+    font-size: 60px;
+    color: #d2ac2b;
+    text-transform: uppercase;
+    font-weight: 700; /* heavy */
     vertical-align: middle;
 }
 
@@ -321,6 +330,7 @@ a.text-link > span {
 }
 
 #footer {
+    min-height: 200px;
     height: 200px;
     background-color: #d2ac2b;
 }
@@ -383,8 +393,114 @@ a.text-link > span {
     width: 160px;
 }
 
+#amor {
+    background: url(../img/amor/amor-bg.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center bottom;
+}
+
+#amor p {
+    color: #d2ac2b;
+}
+
+#amor .blurb {
+    margin-top: 0;
+}
+
+#amor #amor-form-alert {
+    visibility: hidden;
+    color: #fff;
+}
+
+#amor #amor-signup-form {
+    margin-top: 20px;
+}
+
+#amor .form-inline {
+    margin-top: 10px;
+}
+
+#amor .form-inline ~ .form-inline {
+    margin-top: 20px;
+}
+
+#amor .form-control {
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    /*border: 2px solid;*/
+    /*border-color: #d2ac2b;*/
+    border: 0;
+    /*border-color: #fff;*/
+    /*background-color: rgba(0, 0, 0, 0);*/
+    /*background-color: #231f20;*/
+    background-color: #fff;
+    /*color: #231f20;*/
+
+    margin: 0;
+
+    font-size: 20px;
+    height: 50px;
+}
+
+#amor .btn {
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    border: 0;
+    background-color: #d2ac2b;
+    /*background-color: #fff;*/
+    color: #231f20;
+
+    margin: 0;
+
+    font-size: 20px;
+    height: 50px;
+    width: 220px;
+}
+
+#amor .info-row {
+    margin-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#amor .info-row > .col-sm-3 {
+
+}
+
+#amor .info-row > .col-sm-3 ~ .col-sm-3 {
+    margin-top: 25px;
+    padding-top: 25px;
+
+    border-top: 2px solid;
+    border-left: 0;
+    border-color: #d2ac2b;
+}
+
+#amor .info-row .header-text {
+    margin-bottom: 20px;
+}
+
+#amor .info-row p {
+    font-size: 15px;
+}
+
+#amor .info-row a,
+#amor .info-row button {
+    font-size: 15px;
+    color: #d2ac2b;
+    text-decoration: underline;
+    border: 0;
+    background: none;
+}
+
 @media (min-width: 768px) {
-    .row {
+    .container-fluid > .row {
+        min-height: 100%;
         height: 100%;
     }
 
@@ -417,5 +533,14 @@ a.text-link > span {
 
     .no-pad {
         padding: 0;
+    }
+
+    #amor .info-row > .col-sm-3 ~ .col-sm-3 {
+        margin-top: 0;
+        padding-top: 0;
+
+        border-top: 0;
+        border-left: 2px solid;
+        border-color: #d2ac2b;
     }
 }
