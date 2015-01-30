@@ -3,7 +3,7 @@
  */
 
 /* smooth scrolling on anchor jumps */
-$(window).load(function () {
+$(function () {
     /* set the current hash as active */
     //var currentPage = location.hash ? location.hash : '#home';
     //$('.tc-sidebar li > a[href="'+currentPage+'"]').parent().addClass("active");
@@ -13,14 +13,18 @@ $(window).load(function () {
     var body = $('html body');
     var anchorLinks = $('.tc-sidebar a[href*=#]:not([href=#give])');
 
+    function setActive(link) {
+        history.pushState({}, '', link.hash);
+        anchorLinks.parent().removeClass("active");
+        $(link).parent().addClass("active");
+    }
+
     function scrollTo(target, link) {
         var offset = target.offset().top - $('.tc-topbar').height();// + 1;
         body.stop().animate({
             scrollTop: offset
         }, 300);
-        history.pushState({}, '', link.hash);
-        anchorLinks.parent().removeClass("active");
-        $(link).parent().addClass("active");
+        setActive(link);
     }
 
     anchorLinks.click(function (e) {
@@ -39,7 +43,7 @@ $(window).load(function () {
     });
 
     var currentPage = location.hash ? location.hash : '#home';
-    scrollTo($(currentPage), $('.tc-sidebar li > a[href="' + currentPage + '"]'));
+    setActive($('.tc-sidebar li > a[href="' + currentPage + '"]'));
 
     $('.tc-sidebar-toggle').click(function(e) {
         sidebar.toggleClass('tc-sidebar-hidden');
