@@ -1,0 +1,3 @@
+[submodule "web/sermons"]
+	path = web/sermons
+	url = https://github.com/thecommons/thecommons-sermons.git

@@ -1,0 +1,181 @@
+.tc-topbar {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    background-color: #231f20;
+    padding-right: 5%;
+}
+
+.tc-topbar,
+.tc-topbar-pad {
+    height: 60px;
+}
+
+.tc-sidebar-toggle {
+    padding-top: 14px;
+    font-size: 26px;
+    color: #d2ac2b;
+    /*color: #fff;*/
+}
+
+.tc-sidebar-toggle-icon {
+    /*
+    padding: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    */
+}
+
+.tc-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1030;
+
+    padding-top: 15px;
+
+    background-color: #231f20;
+    overflow-x: hidden;
+
+    width: 260px; /* but hidden by default on mobile */
+    -webkit-transition: width 0.2s ease;
+    -ms-transition: width 0.2s ease;
+    -moz-transition: width 0.2s ease;
+    -o-transition: width 0.2s ease;
+    transition: width 0.2s ease;
+}
+
+.tc-sidebar-hidden {
+    width: 0;
+}
+
+/* bg gradient */
+.tc-sidebar-DISABLED {
+    background: -moz-linear-gradient(left, rgba(35, 31, 32, 1) 0%, rgba(35, 31, 32, 0.9) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(35, 31, 32, 1)), color-stop(100%, rgba(35, 31, 32, 0.9))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(35, 31, 32, 1) 0%, rgba(35, 31, 32, 0.9) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(35, 31, 32, 1) 0%, rgba(35, 31, 32, 0.9) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(35, 31, 32, 1) 0%, rgba(35, 31, 32, 0.9) 100%); /* IE10+ */
+    background: linear-gradient(to right, rgba(35, 31, 32, 1) 0%, rgba(35, 31, 32, 0.9) 100%); /* W3C */
+}
+
+/* all links */
+.tc-sidebar .nav > li,
+.tc-sidebar .nav > li > a {
+    padding: 0;
+    height: 70px;
+    display: table;
+    table-layout: fixed;
+}
+
+/* non-active link */
+.tc-sidebar .nav > li > a > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #514C4D;
+}
+.tc-sidebar .nav > li > a > .icon {
+    width: 80px;
+    font-size: 24px !important;
+}
+.tc-sidebar .nav > li > a > .text {
+    font-family: 'futura-pt', sans-serif;
+    font-weight: 700; /* heavy */
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* non-active link, on hover */
+.tc-sidebar .nav > li > a,
+.tc-sidebar .nav > li > a:hover div,
+.tc-sidebar .nav > li > a:focus div {
+    background-color: transparent;
+    color: #d2ac2b;
+
+    -o-transition: color .3s;
+    -ms-transition: color .3s;
+    -moz-transition: color .3s;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+}
+
+.tc-sidebar .nav > li > a:focus,
+.tc-sidebar .nav > li > a:focus {
+    outline: none;
+}
+
+/* active link (hover is no change) */
+.tc-sidebar .nav > li.active > a,
+.tc-sidebar .nav > li.active > a > div,
+.tc-sidebar .nav > li.active > a:hover > div,
+.tc-sidebar .nav > li.active > a:focus > div {
+    color: #d2ac2b;
+    background-color: transparent;
+}
+
+.tc-sidebar .nav > li.brand,
+.tc-sidebar .nav > li.brand > a{
+
+}
+
+.tc-sidebar .nav > li.brand > a > .icon {
+    font-size: 34px !important;
+}
+
+.tc-sidebar .nav > li.brand > a > .text {
+    font-size: 12px !important;
+}
+
+@media (min-width: 768px) {
+
+    .tc-topbar,
+    .tc-topbar-pad {
+        height: 0;
+    }
+
+    .tc-sidebar {
+        width: 100px !important;
+    }
+
+    .tc-sidebar-hidden {
+        width: 100px;
+    }
+
+    .tc-sidebar:hover,
+    .tc-sidebar:focus,
+    .tc-sidebar .nav > li {
+        width: 360px !important;
+        margin: 0;
+    }
+
+    .tc-sidebar .nav > li > a > .text {
+        font-size: 20px !important;
+    }
+
+    .tc-sidebar .nav > li > a > .icon {
+        width: 100px !important;
+        font-size: 28px !important;
+    }
+
+    .tc-sidebar .nav-pills > li > a {
+        border-radius: 0;
+    }
+
+    .tc-sidebar .nav > li.brand > a > .icon {
+        font-size: 44px !important;
+    }
+
+    .tc-sidebar .nav > li.brand > a > .text {
+        font-size: 16px !important;
+    }
+
+    .container-fluid {
+        margin-left: 100px;
+    }
+
+}

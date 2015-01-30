@@ -1,0 +1,138 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+
+#wrapper {
+    height:100%;
+    padding-left: 0;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    overflow-y: hidden;
+}
+
+#wrapper.toggled {
+    padding-left: 330px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 330px;
+    width: 0;
+    height: 100%;
+    margin-left: -330px;
+    overflow-y: auto;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 330px;
+}
+
+#page-content-wrapper {
+    height:100%;
+    width: 100%;
+    padding: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -330px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 330px;
+    margin: 0;
+    padding: 30px 0 0 0px;
+    list-style: none;
+}
+
+.sidebar-link {
+    padding-bottom: 20px;
+}
+
+.sidebar-link:hover .sidebar-text,
+.sidebar-link:hover .sidebar-icon i{
+    color: #d2ac2b;
+    -o-transition: .3s;
+    -ms-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.sidebar-nav li a,
+.sidebar-nav li a:focus,
+.sidebar-nav li a:active {
+    text-decoration: none;
+}
+
+.sidebar-icon {
+    display: table-cell;
+    width: 100px;
+}
+
+.sidebar-icon.brand i {
+    font-size: 34px;
+}
+
+.sidebar-icon i {
+    font-size: 28px;
+    color: #fff;
+}
+
+.sidebar-text {
+    width: 230px;
+    display: table-cell;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.active .sidebar-icon i,
+.active .sidebar-text {
+    color: #d2ac2b;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 330px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 100px;
+    }
+
+    #sidebar-wrapper {
+        width: 330px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 100px;
+    }
+
+    #page-content-wrapper {
+        padding: 0;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 100px;
+    }
+}
