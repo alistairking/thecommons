@@ -297,12 +297,22 @@ a.text-link > span {
     height: auto;
 }
 
+/* sermon listings */
+
 .sermon {
     margin-bottom: 30px;
+    display: table;
 }
 
-.sermon .row .sermon-info {
-    display: inline-block;
+.sermon .sermon-left {
+    display: table-cell;
+    width: 60px;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.sermon .sermon-info {
+    display: table-cell;
 }
 
 .sermon .sermon-info .row p {
@@ -319,18 +329,49 @@ a.text-link > span {
     font-size: 20px;
 }
 
-.sermon .sermon-date {
-    background-color: #231f20;
-    color: #231f20;
-    display: inline-block;
-    float: left;
-    width: 50px;
-    height: 50px;
-}
-
 .sermon .description {
     color: #231f20;
     font-size: 16px;
+}
+
+.sermon .cal-icon {
+    display: block;
+    position: relative;
+    width: 48px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    /*box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;*/
+    box-shadow: 0 0 0 1px #bdbdbd;
+    overflow: hidden;
+}
+
+.sermon .cal-icon * {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sermon .cal-icon strong {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    height: 18px;
+    color: #fff;
+    background-color: #d2ac2b;
+    /*border-bottom: 1px dashed #f37302;*/
+    box-shadow: 0 2px 0 #d2ac2b;
+    font-size: 15px;
+}
+
+.sermon .cal-icon span {
+    font-size: 25px;
+    letter-spacing: -0.05em;
+    padding-top: 18px;
+    color: #2f2f2f;
 }
 
 #footer {
@@ -414,40 +455,8 @@ a.text-link > span {
     margin-top: 0;
 }
 
-#amor #amor-form-alert {
-    visibility: hidden;
-    color: #fff;
-}
-
-#amor #amor-signup-form {
-    margin-top: 20px;
-}
-
-#amor .form-inline {
-    margin-top: 10px;
-}
-
-#amor .form-inline ~ .form-inline {
-    margin-top: 20px;
-}
-
-#amor .form-control {
-    -webkit-appearance: none;
-    border-radius: 0;
-
-    /*border: 2px solid;*/
-    /*border-color: #d2ac2b;*/
-    border: 0;
-    /*border-color: #fff;*/
-    /*background-color: rgba(0, 0, 0, 0);*/
-    /*background-color: #231f20;*/
-    background-color: #fff;
-    /*color: #231f20;*/
-
-    margin: 0;
-
-    font-size: 20px;
-    height: 50px;
+#amor .video {
+    padding: 0 0 35px 0;
 }
 
 #amor .btn {
@@ -462,8 +471,25 @@ a.text-link > span {
     margin: 0;
 
     font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700; /* heavy */
+
     height: 50px;
-    width: 220px;
+    width: 100%;
+    max-width: 200px;
+}
+
+#amor .btn-desc {
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+#amor .info-grid .row:last-child {
+    padding-top: 35px;
+}
+
+#amor .info-grid .col-sm-6 {
+    padding: 0 10px 35px 10px;
 }
 
 #amor .info-row {
@@ -472,29 +498,15 @@ a.text-link > span {
     padding-right: 5%;
 }
 
-#amor .info-row > .col-sm-3 {
-
+#amor .info-grid .header-text {
+    margin-bottom: 10px;
 }
 
-#amor .info-row > .col-sm-3 ~ .col-sm-3 {
-    margin-top: 25px;
-    padding-top: 25px;
-
-    border-top: 2px solid;
-    border-left: 0;
-    border-color: #d2ac2b;
-}
-
-#amor .info-row .header-text {
-    margin-bottom: 20px;
-}
-
-#amor .info-row p {
+#amor .info-grid p {
     font-size: 15px;
 }
 
-#amor .info-row a,
-#amor .info-row button {
+#amor .info-grid a  {
     font-size: 15px;
     color: #d2ac2b;
     text-decoration: underline;
@@ -595,12 +607,13 @@ a.text-link > span {
         padding: 0;
     }
 
-    #amor .info-row > .col-sm-3 ~ .col-sm-3 {
-        margin-top: 0;
-        padding-top: 0;
-
-        border-top: 0;
-        border-left: 2px solid;
-        border-color: #d2ac2b;
+    #amor .info-grid .row:first-child .col-sm-6:after {
+        content: "";
+        background-color: #d2ac2b;
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        right: 10%;
+        height: 2px;
     }
 }
