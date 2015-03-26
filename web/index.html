@@ -78,6 +78,16 @@
                 </div>
             </a>
         </li>
+	<li>
+          <a href="#sermons">
+            <div class="icon">
+              <i class="icon icon-commons-sermons"></i>
+            </div>
+            <div class="text">
+              Sermons
+            </div>
+          </a>
+        </li>
         <li>
             <a href="#give" data-toggle="modal">
                 <div class="icon">
@@ -454,6 +464,31 @@
     </div>
 </div>
 <div class="clearfix"></div>
+<div class="row series-bg" id="sermons">
+    <div class="col-sm-6 series-pane">
+        <div class="row series-header">
+            <div class="col-sm-6 no-pad">
+                <div class="underline full">
+                    <p class="header-text" id="sermon-title">
+                        Sermon Series
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 no-pad text-center">
+                <img class="series-name-img"
+                     src="img/tmp/503Youaskedforit/youaskedforit.png"/>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6" id="sermon-browser">
+        <div class="header-text underline full invert">
+            <p id="sermon-series-title">Loading Sermons...</p>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
 <div class="row" id="footer">
     <div class="col-sm-4 col-left">
         <div class="row">
@@ -556,6 +591,7 @@
 <script type="text/javascript"
         src="//maps.googleapis.com/maps/api/js?key=AIzaSyAZ_sTmFU5_VW_PSVsDK6PC2eWAk7KP0ys"></script>
 <script src="js/thecommons.js"></script>
+<script src="js/sermonbrowser.js"></script>
 </body>
 
 </html>

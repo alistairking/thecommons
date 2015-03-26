@@ -63,11 +63,15 @@ html {
 .intro-bg {
     height: 100% !important;
     width: 100%;
-    background: url(../img/np-11-x3-faded.jpg) no-repeat bottom center scroll;
+    background: url(../img/np-15-x3.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.intro-bg > .col-sm-12 {
+    background: rgba(35, 31, 32, .3);
 }
 
 .qb-bg {
@@ -108,7 +112,7 @@ html {
     color: #d2ac2b;
     font-size: 18px;
     text-transform: uppercase;
-    opacity: 0.2;
+    /*opacity: 0.2;*/
 }
 
 .logo-img-row {
@@ -285,12 +289,16 @@ a.text-link > span {
 }
 
 .series-bg {
-    background: url(../img/tmp/Commons-EVOL-BG.jpg) no-repeat bottom center scroll;
+    background: url(../img/tmp/503Youaskedforit/youaskedforittitle.jpg) no-repeat center top scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
     overflow: hidden;
+}
+
+#sermons .series-name-img {
+    max-width: 100%;
 }
 
 .series-header.row {
@@ -304,6 +312,25 @@ a.text-link > span {
     display: table;
 }
 
+#sermons .series-pane {
+    background: -moz-linear-gradient(top, rgba(35, 31, 32, 0.5) 0%, rgba(35, 31, 32, 0.5) 55%, rgba(35, 31, 32, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(35, 31, 32, 0.5)), color-stop(55%, rgba(35, 31, 32, 0.5)), color-stop(100%, rgba(35, 31, 32, 0)));
+    background: -webkit-linear-gradient(top, rgba(35, 31, 32, 0.5) 0%, rgba(35, 31, 32, 0.5) 55%, rgba(35, 31, 32, 0) 100%);
+    background: -o-linear-gradient(top, rgba(35, 31, 32, 0.5) 0%, rgba(35, 31, 32, 0.5) 55%, rgba(35, 31, 32, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(35, 31, 32, 0.5) 0%, rgba(35, 31, 32, 0.5) 55%, rgba(35, 31, 32, 0) 100%);
+    background: linear-gradient(to bottom, rgba(35, 31, 32, 0.5) 0%, rgba(35, 31, 32, 0.5) 55%, rgba(35, 31, 32, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80231f20', endColorstr='#00231f20', GradientType=0);
+
+}
+
+.series-header .header-text {
+    color: #fff;
+}
+
+.series-header .underline {
+    border-color: #fff;
+}
+
 .sermon .sermon-left {
     display: table-cell;
     width: 60px;
@@ -315,13 +342,20 @@ a.text-link > span {
     display: table-cell;
 }
 
-.sermon .sermon-info .row p {
+.sermon .title {
+    color: #fff;
     text-transform: uppercase;
     font-weight: 700; /* heavy */
     font-size: 16px;
 }
 
-.sermon .title {
+.sermon .title a {
+    text-decoration: none;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.sermon .title a :hover {
     color: #d2ac2b;
 }
 
@@ -330,48 +364,27 @@ a.text-link > span {
 }
 
 .sermon .description {
-    color: #231f20;
+    color: #fff;
     font-size: 16px;
 }
 
-.sermon .cal-icon {
-    display: block;
-    position: relative;
-    width: 48px;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 5px;
-    /*box-shadow: 0 1px 0 #bdbdbd, 0 2px 0 #fff, 0 3px 0 #bdbdbd, 0 4px 0 #fff, 0 5px 0 #bdbdbd, 0 0 0 1px #bdbdbd;*/
-    box-shadow: 0 0 0 1px #bdbdbd;
-    overflow: hidden;
-}
-
-.sermon .cal-icon * {
-    display: block;
-    width: 100%;
-    font-weight: bold;
-    font-style: normal;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.sermon .cal-icon strong {
-    position: absolute;
-    top: 0;
-    padding: 0;
-    height: 18px;
+.sermon .date {
     color: #fff;
-    background-color: #d2ac2b;
-    /*border-bottom: 1px dashed #f37302;*/
-    box-shadow: 0 2px 0 #d2ac2b;
-    font-size: 15px;
+    /*padding-right: 15px;*/
+    width: 80px;
+    display: inline-block;
 }
 
-.sermon .cal-icon span {
-    font-size: 25px;
-    letter-spacing: -0.05em;
-    padding-top: 18px;
-    color: #2f2f2f;
+#sermon-browser .header-text {
+    color: #fff;
+}
+
+#sermon-browser .underline {
+    border-color: #fff;
+}
+
+#sermon-browser {
+    background: rgba(35, 31, 32, .5);
 }
 
 #footer {
