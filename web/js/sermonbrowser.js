@@ -2,7 +2,7 @@
  * Created by alistair on 3/17/15.
  */
 
-var current_series_id = '206youaskedforit';
+var current_series_id = '207manifestoofhope';
 
 var months = [
     'Jan',
@@ -31,6 +31,14 @@ $(function () {
 
                     var date = new Date(0);
                     date.setUTCSeconds(sermon.time);
+
+		    $('#sermon-series-fg').append(
+			'<img class="series-name-img" ' +
+			    'src="' + series.cover_fg + '"/>'
+		    );
+
+		    $('.series-bg').css('background-image',
+					'url(' + series.cover_bg + ')');
 
                     $('#sermon-browser').append(
                         '<div class="sermon">' +

@@ -289,7 +289,7 @@ a.text-link > span {
 }
 
 .series-bg {
-    background: url(../img/tmp/503Youaskedforit/youaskedforittitle.jpg) no-repeat center top scroll;
+    background: no-repeat center top scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
