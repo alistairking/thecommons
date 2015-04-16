@@ -27,18 +27,18 @@ $(function () {
 
                 $('#sermon-series-title').html(series.title);
 
+		$('#sermon-series-fg').append(
+		    '<img class="series-name-img" ' +
+			'src="' + series.cover_fg + '"/>'
+		);
+
+		$('.series-bg').css('background-image',
+				    'url(' + series.cover_bg + ')');
+
                 series.sermons.forEach(function(sermon) {
 
                     var date = new Date(0);
                     date.setUTCSeconds(sermon.time);
-
-		    $('#sermon-series-fg').append(
-			'<img class="series-name-img" ' +
-			    'src="' + series.cover_fg + '"/>'
-		    );
-
-		    $('.series-bg').css('background-image',
-					'url(' + series.cover_bg + ')');
 
                     $('#sermon-browser').append(
                         '<div class="sermon">' +
