@@ -2,7 +2,7 @@
  * Created by alistair on 3/17/15.
  */
 
-var current_series_id = '207manifestoofhope';
+var current_series_id = '208lead';
 
 var months = [
     'Jan',
