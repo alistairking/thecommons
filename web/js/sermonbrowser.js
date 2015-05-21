@@ -2,7 +2,7 @@
  * Created by alistair on 3/17/15.
  */
 
-var current_series_id = '208lead';
+var current_series_id = '203worshipcollective';
 
 var months = [
     'Jan',
