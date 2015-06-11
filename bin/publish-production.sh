@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -av --delete web/ thecommons:thecommonsforall.com/web/
+rsync -av --delete web/ wearethecommons@thecommonsforall.com:thecommonsforall.com/web/

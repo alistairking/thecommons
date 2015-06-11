@@ -84,7 +84,7 @@ html {
 }
 
 .qb-spacer {
-    height: 320px;
+    height: 400px;
 }
 
 .mission-img {
@@ -252,6 +252,45 @@ a.text-link > span {
     margin-right: 10px;
 }
 
+.staff-col {
+    padding: 0 !important;
+}
+
+.staff-img {
+    height: 100%;
+    margin: 0;
+}
+
+.staff-jon {
+    background: url(../img/staff/jon-nichols.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.staff-jeremey {
+    background: url(../img/staff/jeremey-glazier.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.staff-ryan {
+    background: url(../img/staff/ryan-english.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.staff-alistair {
+    background: url(../img/staff/alistair-king.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.staff-andy {
+    background: url(../img/staff/andy-lyde.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.staff-damin {
+    background: url(../img/staff/damin-sterling.jpg) no-repeat center center;
+    background-size: cover;
+}
+
 .row.staff {
     height: auto !important;
 }
@@ -259,10 +298,6 @@ a.text-link > span {
 .staff-col {
     padding-left: 0;
     padding-right: 15px;
-}
-
-.staff-img {
-    margin-bottom: 15px;
 }
 
 .staff-name {
