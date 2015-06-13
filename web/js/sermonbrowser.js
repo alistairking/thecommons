@@ -32,13 +32,21 @@ function setSermonSeries(idx) {
 
     $('#sermon-series-title').html(series.title);
 
-    $('#sermon-series-fg').html(
-        '<img class="series-name-img" ' +
-        'src="' + series.cover_fg + '"/>'
-    );
+    if (series.cover_fg) {
+        $('#sermon-series-fg').html(
+            '<img class="series-name-img" ' +
+            'src="' + series.cover_fg + '"/>'
+        );
+    } else {
+        $('#sermon-series-fg').html('');
+    }
 
-    $('.series-bg').css('background-image',
-        'url(' + series.cover_bg + ')');
+    if (series.cover_bg) {
+        $('.series-bg').css('background-image',
+            'url(' + series.cover_bg + ')');
+    } else {
+        $('.series-bg').css('background-image', 'none');
+    }
 
     var sermonSeriesSermons = $('#sermon-series-sermons');
     sermonSeriesSermons.html('');
