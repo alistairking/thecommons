@@ -17,7 +17,7 @@ var months = [
     'Oct',
     'Nov',
     'Dec'
-    ];
+];
 
 $(function () {
     $.getJSON("/sermons/?format=json", function(data) {
@@ -27,18 +27,21 @@ $(function () {
 
                 $('#sermon-series-title').html(series.title);
 
-		$('#sermon-series-fg').append(
-		    '<img class="series-name-img" ' +
-			'src="' + series.cover_fg + '"/>'
-		);
+                $('#sermon-series-fg').append(
+                    '<img class="series-name-img" ' +
+                    'src="' + series.cover_fg + '"/>'
+                );
 
-		$('.series-bg').css('background-image',
-				    'url(' + series.cover_bg + ')');
+                $('.series-bg').css('background-image',
+                    'url(' + series.cover_bg + ')');
 
                 series.sermons.forEach(function(sermon) {
 
                     var date = new Date(0);
                     date.setUTCSeconds(sermon.time);
+
+                    var audioStr = sermon.audio ?
+                    '<audio src="' + sermon.audio + '" preload="metadata" controls></audio>' : '';
 
                     $('#sermon-browser').append(
                         '<div class="sermon">' +
@@ -49,16 +52,16 @@ $(function () {
                         months[date.getMonth()] + ' ' + date.getDate() +
                         '</div>' +
                         sermon.title +
-                        //'<a href="' + sermon.audio + '" target="_blank">' +
-                        //'<i class="icon-youtube-play" href="'+ sermon.audio + '"></i>' +
-                        //'</a>' +
+                            //'<a href="' + sermon.audio + '" target="_blank">' +
+                            //'<i class="icon-youtube-play" href="'+ sermon.audio + '"></i>' +
+                            //'</a>' +
                         '</div>' +
                         '</div>' +
                         '<div class="row">' +
                         '<div class="description">' +
                         sermon.desc +
                         '</div>' +
-                        '<audio src="' + sermon.audio + '" preload="metadata" controls></audio>' +
+                        audioStr +
                         '</div>' +
                         '</div>' +
                         '</div>'
