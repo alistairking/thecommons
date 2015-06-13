@@ -56,6 +56,10 @@ html {
     height: 50%;
 }
 
+.third-row {
+    height: 33.333333%;
+}
+
 .no-margin {
     margin: 0;
 }
@@ -84,7 +88,8 @@ html {
 }
 
 .qb-spacer {
-    height: 400px;
+    min-height: 350px;
+    height: 350px;
 }
 
 .mission-img {
@@ -258,7 +263,9 @@ a.text-link > span {
 
 .staff-img {
     height: 100%;
+    min-height: 200px;
     margin: 0;
+    padding: 0;
 }
 
 .staff-jon {
@@ -295,22 +302,36 @@ a.text-link > span {
     height: auto !important;
 }
 
-.staff-col {
-    padding-left: 0;
-    padding-right: 15px;
+
+.staff-label-bg {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #231f20;
+    opacity: 0.6;
+}
+
+.staff-label {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    padding-top: 8px;
+    line-height: 100%;
 }
 
 .staff-name {
-    color: #231f20;
+    color: #d2ac2b;
     font-weight: 700; /* heavy */
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 0;
 }
 
 .staff-role {
-    color: #231f20;
+    color: #d2ac2b;
     font-size: 16px;
-    font-style: italic;
 }
 
 /* MISSION */
