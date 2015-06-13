@@ -67,7 +67,7 @@ html {
 .intro-bg {
     height: 100% !important;
     width: 100%;
-    background: url(../img/np-15-x3.jpg) no-repeat top center scroll;
+    background: url(../img/home-bg.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -79,7 +79,7 @@ html {
 }
 
 .qb-bg {
-    background: url(../img/np-7-x3-tall.jpg) no-repeat bottom center scroll;
+    background: url(../img/sunday-gathering-tall.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
