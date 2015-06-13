@@ -387,6 +387,26 @@ a.text-link > span {
     vertical-align: middle;
 }
 
+.sermon-nav {
+    color: #fff;
+    font-size: 24px;
+}
+
+.sermon-nav > span:focus,
+.sermon-nav > span:hover {
+    color: #d2ac2b;
+    cursor: pointer;
+}
+
+.sermon-nav > span.disabled {
+    opacity: 0.5;
+}
+
+.sermon-nav > span.disabled:focus,
+.sermon-nav > span.disabled:hover {
+    color: #fff !important;
+}
+
 .sermon .sermon-info {
     display: table-cell;
 }
