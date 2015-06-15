@@ -444,6 +444,10 @@ a.text-link > span {
     display: inline-block;
 }
 
+#sermon-browser {
+    overflow: auto;
+}
+
 #sermon-browser .header-text {
     color: #fff;
 }
