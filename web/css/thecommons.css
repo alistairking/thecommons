@@ -369,13 +369,12 @@ a.text-link > span {
 
 .series-header-content {
     border-color: #fff;
-    padding-bottom: 2%;
-    margin-bottom: 30px;
     border-bottom: 3px solid;
 }
 
-.series-header-content .col-sm-6 {
+.series-header-content .col-xs-6 {
     padding: 0;
+    height: 50px;
 }
 
 /* sermon listings */
@@ -625,6 +624,61 @@ a.text-link > span {
 .col-xs-height {
     display: table-cell;
     float: none !important;
+}
+
+.video-nav-wrapper {
+    height: 17%;
+    padding-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 3%;
+}
+
+.video-nav {
+    height: 50px;
+    border-color: #fff;
+    border-bottom: 3px solid;
+    padding: 0;
+}
+
+.video-nav .header-text {
+    color: #fff;
+}
+
+.video-content {
+    height: 83%;
+}
+
+.video-content > .row {
+    height: 50%;
+}
+
+.video-content .col-sm-4 {
+    min-height: 180px;
+}
+
+.video-content #video-a {
+    background-color: #123456;
+}
+
+.video-content #video-b {
+    background-color: #654321;
+}
+
+.video-content #video-c {
+    background-color: #123456;
+}
+
+.video-content #video-d {
+    background-color: #654321;
+}
+
+.video-content #video-e {
+    background-color: #123456;
+}
+
+.video-content #video-f {
+    background-color: #654321;
 }
 
 @media (min-width: 768px) {
