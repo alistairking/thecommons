@@ -30,7 +30,7 @@ function setSermonSeries(idx) {
 
     $('#sermon-title').html(!idx ? 'Current Sermon Series' : 'Sermon Series');
 
-    $('#sermon-series-title').html(series.title);
+    //$('#sermon-series-title').html(series.title);
 
     if (series.cover_fg) {
         $('#sermon-series-fg').html(

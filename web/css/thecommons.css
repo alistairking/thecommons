@@ -361,6 +361,23 @@ a.text-link > span {
     height: auto;
 }
 
+.series-header .row {
+    padding-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.series-header-content {
+    border-color: #fff;
+    padding-bottom: 2%;
+    margin-bottom: 30px;
+    border-bottom: 3px solid;
+}
+
+.series-header-content .col-sm-6 {
+    padding: 0;
+}
+
 /* sermon listings */
 
 .sermon {
@@ -374,10 +391,6 @@ a.text-link > span {
 
 .series-header .header-text {
     color: #fff;
-}
-
-.series-header .underline {
-    border-color: #fff;
 }
 
 .sermon .sermon-left {
@@ -450,10 +463,6 @@ a.text-link > span {
 
 #sermon-browser .header-text {
     color: #fff;
-}
-
-#sermon-browser .underline {
-    border-color: #fff;
 }
 
 #sermon-browser {
