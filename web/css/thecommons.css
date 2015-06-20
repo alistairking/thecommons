@@ -678,7 +678,7 @@ a.text-link > span {
     right: 0;
     position: absolute;
     z-index: -1;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .video-tile:hover::after {
@@ -690,6 +690,7 @@ a.text-link > span {
     table-layout: fixed;
     height: 100%;
     width: 100%;
+    min-height: 180px;
 }
 
 .video-content .icon {
@@ -703,8 +704,26 @@ a.text-link > span {
     font-size: 20px;
 }
 
+/* tweaks for lightbox */
+.modal-backdrop {
+    bottom: 0;
+    position: fixed;
+}
+.modal-dialog {
+    width: 100%;
+    /* height: 100%; */ /* @todo fixme: causes problems with hide modal */
+    /* margin-top: -55px; */
+    display: table;
+    table-layout: fixed;
+}
+
+.modal-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .video-content #video-a::after {
-    background: url(../img/video-thumbs/coffee.jpg) no-repeat top center scroll;
+    background: url(../img/video-thumbs/water-3.JPG) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -712,22 +731,6 @@ a.text-link > span {
 }
 
 .video-content #video-b::after {
-    background: url(../img/video-thumbs/farm.jpg) no-repeat top center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.video-content #video-c::after {
-    background: url(../img/video-thumbs/sky-2.jpg) no-repeat top center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.video-content #video-d::after {
     background: url(../img/video-thumbs/storm.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -735,7 +738,7 @@ a.text-link > span {
     -o-background-size: cover;
 }
 
-.video-content #video-e::after {
+.video-content #video-c::after {
     background: url(../img/video-thumbs/water-1.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -743,8 +746,24 @@ a.text-link > span {
     -o-background-size: cover;
 }
 
+.video-content #video-d::after {
+    background: url(../img/video-thumbs/farm.jpg) no-repeat top center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.video-content #video-e::after {
+    background: url(../img/video-thumbs/sky-2.jpg) no-repeat top center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .video-content #video-f::after {
-    background: url(../img/video-thumbs/water-3.JPG) no-repeat top center scroll;
+    background: url(../img/video-thumbs/coffee.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -834,5 +853,16 @@ a.text-link > span {
         left: 10%;
         right: 10%;
         height: 2px;
+    }
+
+    .ekko-lightbox {
+        margin-left: 100px;
+    }
+
+    .modal-dialog {
+        width: 80%;
+        max-width: 80%;
+        /* margin-top: -55px; */
+        margin-top: 10%;
     }
 }

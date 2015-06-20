@@ -6,11 +6,13 @@
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
           rel="stylesheet" media="screen">
-    <link href="libs/fontello/css/fontello.css"
-          rel="stylesheet" media="screen">
+    <link href="libs/lightbox/css/ekko-lightbox.css" rel="stylesheet"
+          media="screen">
+    <link href="libs/lightbox/css/dark.css" rel="stylesheet"
+          media="screen">
+    <link href="libs/fontello/css/fontello.css" rel="stylesheet" media="screen">
     <link href="css/thecommons-sidebar.css" rel="stylesheet">
-    <link href="css/thecommons.css"
-          rel="stylesheet" media="screen">
+    <link href="css/thecommons.css" rel="stylesheet" media="screen">
 
     <link href="img/favicon.ico"
           type="image/x-icon" rel="shortcut icon">
@@ -523,7 +525,10 @@
         <div class="row video-content">
             <div class="row">
                 <div class="col-sm-4 video-tile" id="video-a">
-                    <a href="#video-a-fs" data-toggle="modal">
+                    <a href="//vimeo.com/128640808"
+                       data-remote="//player.vimeo.com/video/128640808"
+                       data-title="Why was Jesus Baptized?"
+                       data-toggle="lightbox">
                         <div class="title-wrap">
                             <div class="title-content text-center">
                                 <div class="icon">
@@ -537,7 +542,10 @@
                     </a>
                 </div>
                 <div class="col-sm-4 video-tile" id="video-b">
-                    <a href="#video-b-fs" data-toggle="modal">
+                    <a href="//vimeo.com/128640806"
+                       data-remote="//player.vimeo.com/video/128640806"
+                       data-title="How is One Baptized?"
+                       data-toggle="lightbox">
                         <div class="title-wrap">
                             <div class="title-content text-center">
                                 <div class="icon">
@@ -551,7 +559,10 @@
                     </a>
                 </div>
                 <div class="col-sm-4 video-tile" id="video-c">
-                    <a href="#video-c-fs" data-toggle="modal">
+                    <a href="//vimeo.com/128640805"
+                       data-remote="//player.vimeo.com/video/128640805"
+                       data-title="Is the Practice of Baptism an Empty Ritual?"
+                       data-toggle="lightbox">
                         <div class="title-wrap">
                             <div class="title-content text-center">
                                 <div class="icon">
@@ -565,7 +576,10 @@
                     </a>
                 </div>
                 <div class="col-sm-4 video-tile" id="video-d">
-                    <a href="#video-d-fs" data-toggle="modal">
+                    <a href="//vimeo.com/105462473"
+                       data-remote="//player.vimeo.com/video/105462473"
+                       data-title="Why We Are Calling Ourselves The Commons"
+                       data-toggle="lightbox">
                         <div class="title-wrap">
                             <div class="title-content text-center">
                                 <div class="icon">
@@ -579,7 +593,10 @@
                     </a>
                 </div>
                 <div class="col-sm-4 video-tile" id="video-e">
-                    <a href="#video-e-fs" data-toggle="modal">
+                    <a href="//vimeo.com/128902902"
+                       data-remote="//player.vimeo.com/video/128902902"
+                       data-title="Compelled: The Confessions that Compel Us to Action"
+                       data-toggle="lightbox">
                         <div class="title-wrap">
                             <div class="title-content text-center">
                                 <div class="icon">
@@ -593,14 +610,18 @@
                     </a>
                 </div>
                 <div class="col-sm-4 video-tile" id="video-f">
-                    <a href="#video-f-fs" data-toggle="modal">
+                    <a href="//vimeo.com/115719981"
+                       data-remote="//player.vimeo.com/video/115719981"
+                       data-title="Be Still And Know I Am God (Contemplative Prayer Exercise)"
+                       data-toggle="lightbox">
                         <div class="title-wrap">
                             <div class="title-content text-center">
                                 <div class="icon">
                                     <i class="icon icon-commons-sermons_videos"></i>
                                 </div>
                                 <div class="title">
-                                    One More Excellent Video
+                                    Be Still And Know I Am God<br>
+                                    (Contemplative Prayer Exercise)
                                 </div>
                             </div>
                         </div>
@@ -667,27 +688,6 @@
     </div>
 </div>
 </div>
-
-<div id="video-a-fs" class="modal fade" tabindex="-1" role="dialog"
-     aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header header-text">
-                <button type="button" class="close" data-dismiss="modal"><span
-                        aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title">A Video Title</h4>
-            </div>
-            <div class="modal-body invert-text">
-                <iframe src="https://player.vimeo.com/video/128640805?title=0&byline=0&portrait=0"
-                        width="500" height="281" frameborder="0"
-                        webkitallowfullscreen mozallowfullscreen
-                        allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div id="give" class="modal fade" tabindex="-1" role="dialog"
      aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -728,6 +728,20 @@
 </div>
 
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="libs/lightbox/js/ekko-lightbox.js"></script>
+<script type="text/javascript">
+    $(document).ready(function ($) {
+
+        // delegate calls to data-toggle="lightbox"
+        $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
+            event.preventDefault();
+            return $(this).ekkoLightbox({
+                always_show_close: true
+            });
+        });
+
+    });
+</script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="js/thecommons.js"></script>
 <script src="js/sermonbrowser.js"></script>
