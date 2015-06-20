@@ -13,6 +13,10 @@
     height: 60px;
 }
 
+.modal-open .tc-topbar {
+    visibility: hidden;
+}
+
 .tc-sidebar-toggle {
     padding-top: 14px;
     font-size: 26px;
