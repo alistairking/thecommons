@@ -715,6 +715,9 @@ a.text-link > span {
     /* margin-top: -55px; */
     display: table;
     table-layout: fixed;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .modal-content {
@@ -863,6 +866,8 @@ a.text-link > span {
         width: 80%;
         max-width: 80%;
         /* margin-top: -55px; */
-        margin-top: 10%;
+        margin: 10% auto;
+        padding-left: auto;
+        padding-right: auto;
     }
 }
