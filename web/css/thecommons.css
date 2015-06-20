@@ -665,85 +665,86 @@ a.text-link > span {
     min-height: 180px;
 }
 
-.video-content .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: #231f20;
-    opacity: 0;
+.video-tile {
+    display: block;
+    position: relative;
 }
 
-.video-content .video-tile {
-    position: absolute;
+.video-tile::after {
+    content: "";
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+    position: absolute;
     z-index: -1;
+    opacity: 0.9;
 }
 
-.video-content .overlay:hover,
-.video-content .overlay:focus {
-    opacity: 0.20;
+.video-tile:hover::after {
+    opacity: 0.2;
 }
 
-.video-content .overlay-wrap {
+.video-content .title-wrap {
     display: table;
     table-layout: fixed;
     height: 100%;
     width: 100%;
 }
 
-.video-content .overlay-content {
+.video-content .icon {
+    font-size: 40px;
+}
+
+.video-content .title-content {
     display: table-cell;
     vertical-align: middle;
     color: #fff;
+    font-size: 20px;
 }
 
-.video-content #video-a {
-    background: url(../img/video-thumbs/baptism-ritual.jpeg) no-repeat top center scroll;
+.video-content #video-a::after {
+    background: url(../img/video-thumbs/coffee.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-.video-content #video-b {
-    background: url(../img/video-thumbs/baptism-why.jpeg) no-repeat top center scroll;
+.video-content #video-b::after {
+    background: url(../img/video-thumbs/farm.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-.video-content #video-c {
-    background: url(../img/video-thumbs/baptism-how.jpeg) no-repeat top center scroll;
+.video-content #video-c::after {
+    background: url(../img/video-thumbs/sky-2.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-.video-content #video-d {
-    background: url(../img/video-thumbs/evil.jpeg) no-repeat top center scroll;
+.video-content #video-d::after {
+    background: url(../img/video-thumbs/storm.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-.video-content #video-e {
-    background: url(../img/video-thumbs/be-still.jpeg) no-repeat top center scroll;
+.video-content #video-e::after {
+    background: url(../img/video-thumbs/water-1.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-.video-content #video-f {
-    background: url(../img/video-thumbs/thecommons-1.jpg) no-repeat top center scroll;
+.video-content #video-f::after {
+    background: url(../img/video-thumbs/water-3.JPG) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
