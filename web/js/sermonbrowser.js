@@ -51,6 +51,11 @@ function setSermonSeries(idx) {
     var sermonSeriesSermons = $('#sermon-series-sermons');
     sermonSeriesSermons.html('');
 
+    // sort sermons based on time
+    series.sermons.sort(function (a, b) {
+        return a.time - b.time;
+    });
+
     series.sermons.forEach(function (sermon) {
 
         var date = new Date(0);
