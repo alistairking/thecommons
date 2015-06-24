@@ -340,6 +340,10 @@ a.text-link > span {
     margin-bottom: 30px;
 }
 
+#sermons {
+    min-height: 800px;
+}
+
 .series-nav {
     color: #FFF;
 }
@@ -726,7 +730,7 @@ a.text-link > span {
 }
 
 .video-content #video-a::after {
-    background: url(../img/video-thumbs/water-3.JPG) no-repeat top center scroll;
+    background: url(../img/video-thumbs/why_was_jesus_baptized.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -734,7 +738,7 @@ a.text-link > span {
 }
 
 .video-content #video-b::after {
-    background: url(../img/video-thumbs/storm.jpg) no-repeat top center scroll;
+    background: url(../img/video-thumbs/how_is_one_baptized.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -742,7 +746,7 @@ a.text-link > span {
 }
 
 .video-content #video-c::after {
-    background: url(../img/video-thumbs/water-1.jpg) no-repeat top center scroll;
+    background: url(../img/video-thumbs/is_the_practice_of_baptism_empty_ritual.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -750,7 +754,7 @@ a.text-link > span {
 }
 
 .video-content #video-d::after {
-    background: url(../img/video-thumbs/farm.jpg) no-repeat top center scroll;
+    background: url(../img/video-thumbs/the_commons.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -758,7 +762,7 @@ a.text-link > span {
 }
 
 .video-content #video-e::after {
-    background: url(../img/video-thumbs/sky-2.jpg) no-repeat top center scroll;
+    background: url(../img/video-thumbs/compelled.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -766,7 +770,7 @@ a.text-link > span {
 }
 
 .video-content #video-f::after {
-    background: url(../img/video-thumbs/coffee.jpg) no-repeat top center scroll;
+    background: url(../img/video-thumbs/be_still.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
