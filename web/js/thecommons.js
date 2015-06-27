@@ -45,6 +45,19 @@ $(function () {
     var currentPage = location.hash ? location.hash : '#home';
     setActive($('.tc-sidebar li > a[href="' + currentPage + '"]'));
 
+    if ($(currentPage).hasClass('modal')) {
+        $('.modal').modal('hide');
+        $(currentPage).modal('show');
+    }
+
+    $(window).on('hashchange', function () {
+        var currentPage = location.hash;
+        if ($(currentPage).hasClass('modal')) {
+            $('.modal').modal('hide');
+            $(currentPage).modal('show');
+        }
+    });
+
     $('.tc-sidebar-toggle').click(function(e) {
         sidebar.toggleClass('tc-sidebar-hidden');
     });
