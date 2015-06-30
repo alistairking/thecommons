@@ -64,6 +64,16 @@ html {
     margin: 0;
 }
 
+.btn-commons {
+    background-color: #2F2A2B;
+    color: #d2ac2b;
+}
+
+.btn-commons:hover,
+.btn-commons:focus {
+    color: #9F7900;
+}
+
 .intro-bg {
     height: 100% !important;
     width: 100%;
