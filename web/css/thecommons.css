@@ -764,7 +764,7 @@ a.text-link > span {
 }
 
 .video-content #video-d::after {
-    background: url(../img/video-thumbs/the_commons.jpg) no-repeat top center scroll;
+    background: url(../img/video-thumbs/wearethecommons.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
