@@ -772,7 +772,7 @@ a.text-link > span {
 }
 
 .video-content #video-e::after {
-    background: url(../img/video-thumbs/compelled.jpg) no-repeat top center scroll;
+    background: url(../img/video-thumbs/trinity-bible.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -780,7 +780,7 @@ a.text-link > span {
 }
 
 .video-content #video-f::after {
-    background: url(../img/video-thumbs/be_still.jpg) no-repeat top center scroll;
+    background: url(../img/video-thumbs/trinity-important.jpg) no-repeat top center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
