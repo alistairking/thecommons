@@ -102,6 +102,15 @@ html {
     height: 350px;
 }
 
+.why-bg {
+    background: url(../img/why-bg.jpg) no-repeat bottom right scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: right bottom;
+}
+
 .mission-img {
     display: table;
     table-layout: fixed;
