@@ -107,7 +107,7 @@ $(function () {
                 function (result) {
                     if (!result['success']) {
                         alertDiv.css('visibility', 'visible');
-                        alertDiv.html("Failed to save sign up details. Please try again.");
+                        alertDiv.html("Failed to save details. Please try again.");
                         return;
                     }
 
@@ -116,7 +116,7 @@ $(function () {
                     $('#amor-email').val('');
                     $('#amor-phone').val('');
 
-                    alertDiv.html("Done. You can now sign up another person.");
+                    alertDiv.html("Done. You can now register another person.");
                 });
         }
     });
