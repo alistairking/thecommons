@@ -1,0 +1,1 @@
+sox -v 2.0 "$1" -b 16 "$2" gain -1 rate 44100 dither -s
