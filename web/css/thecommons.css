@@ -103,7 +103,7 @@ html {
 }
 
 .why-bg {
-    background: url(../img/why-bg.jpg) no-repeat bottom right scroll;
+    background: url(../img/why-bg.png) no-repeat bottom right scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
