@@ -106,6 +106,15 @@ html {
     background-position: center bottom;
 }
 
+.comm-bg {
+    background: url(../img/band.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center bottom;
+}
+
 .qb-spacer {
     min-height: 350px;
     height: 350px;
