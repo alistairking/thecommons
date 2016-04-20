@@ -45,6 +45,9 @@ $(function () {
     var currentPage = location.hash ? location.hash : '#home';
     setActive($('.tc-sidebar li > a[href="' + currentPage + '"]'));
 
+    // show the landing alert modal
+    //$('#landing-alert').modal('show');
+
     if ($(currentPage).hasClass('modal')) {
         $('.modal').modal('hide');
         $(currentPage).modal('show');
