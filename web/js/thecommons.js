@@ -43,7 +43,7 @@ $(function () {
     });
 
     var currentPage = location.hash ? location.hash : '#home';
-    setActive($('.tc-sidebar li > a[href="' + currentPage + '"]'));
+    setActive($('.tc-sidebar li > a[href="' + currentPage + '"]')[0]);
 
     // show the landing alert modal
     //$('#landing-alert').modal('show');
@@ -123,4 +123,14 @@ $(function () {
                 });
         }
     });
+
+    var panels = $('.tc-panel');
+    panels.on('scrollSpy:enter', function () {
+        var panelId = $(this).attr('id');
+        var panel = panelId ? $('.tc-sidebar li > a[href="#' + panelId + '"]') : null;
+        if (panel) {
+            setActive(panel[0]);
+        }
+    });
+    panels.scrollSpy();
 });
