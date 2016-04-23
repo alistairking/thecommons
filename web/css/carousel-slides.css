@@ -1,0 +1,23 @@
+.carousel .item:nth-child(1) {
+    background: url(../img/carousel/amor-women.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel .item:nth-child(2) {
+    background: url(../img/carousel/church-ben.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel .item:nth-child(3) {
+    background: url(../img/carousel/baptism.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
