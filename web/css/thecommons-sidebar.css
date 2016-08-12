@@ -4,7 +4,8 @@
     left: 0;
     right: 0;
     z-index: 1030;
-    background-color: #231f20;
+    /*background-color: #231f20;*/
+    background-color: #ffffff;
     padding-right: 5%;
 }
 
@@ -42,7 +43,8 @@
 
     padding-top: 15px;
 
-    background-color: #231f20;
+    /*background-color: #231f20;*/
+    background-color: #ffffff;
     overflow-x: hidden;
 
     width: 260px; /* but hidden by default on mobile */

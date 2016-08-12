@@ -2,8 +2,10 @@ body {
     width: 100%;
     height: 100%;
     padding: 0;
-    color: #fff;
-    background-color: #231f20;
+    /*color: #fff;*.
+    /*background-color: #231f20;*/
+    color: #231f20;
+    background-color: #ffffff;
     font-family: 'futura-pt', sans-serif;
     /*font-weight: 700;*//* heavy */
     font-size: 20px;
@@ -140,7 +142,34 @@ html {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-position: center bottom;
+}
+
+.sundays-bg {
+    background: url(../img/NPland.jpg) no-repeat bottom left scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.community-bg {
+    background: url(../img/bsc/bsc-bg.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.bsc-logo {
+    margin-bottom: 30px;
+}
+
+.bsc-logo-img {
+    width: 100%;
+}
+
+.childrens-ministry {
+    margin-top: 20px;
 }
 
 .children-bg {
@@ -203,7 +232,8 @@ html {
 }
 
 .invert-bg {
-    background-color: #fff;
+    /*background-color: #fff;*/
+    background-color: #231f20;
 }
 
 .logo-tag-row {
@@ -276,6 +306,10 @@ html {
     vertical-align: middle;
 }
 
+.std-text {
+    color: #231f20;
+}
+
 .hero-text {
     font-size: 60px;
     color: #d2ac2b;
@@ -290,7 +324,8 @@ html {
 }
 
 .invert-text {
-    color: #231f20;
+    /*color: #231f20;*/
+    color: #ffffff;
 }
 
 .middle-parent {
@@ -309,12 +344,12 @@ p {
 }
 
 a.text-link {
-    color: #fff;
-    text-decoration: underline;
+    color: #231f20;
+    text-decoration: none;
 }
 
 .invert-text a.text-link {
-    color: #231f20;
+    color: #fff;
 }
 
 a.text-link > span {
@@ -439,7 +474,7 @@ a.text-link > span {
 }
 
 .series-nav {
-    color: #FFF;
+    /*color: #FFF;*/
 }
 
 .series-bg {
@@ -487,7 +522,7 @@ a.text-link > span {
 }
 
 .series-header .header-text {
-    color: #fff;
+    /*color: #fff;*/
 }
 
 .sermon .sermon-left {
@@ -498,7 +533,7 @@ a.text-link > span {
 }
 
 .sermon-nav {
-    color: #fff;
+    /*color: #fff;*/
     font-size: 24px;
 }
 
@@ -669,10 +704,10 @@ a.text-link > span {
 }
 
 .video-nav .header-text {
-    border-color: #fff;
+    border-color: #231f20;
     border-bottom: 3px solid;
     padding-bottom: 10px;
-    color: #fff;
+    color: #231f20;
 }
 
 .video-content {
