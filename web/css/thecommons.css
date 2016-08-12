@@ -86,12 +86,12 @@ html {
 
 .col-sm-12 {
     height: 100%;
-    padding: 5% 5% 2% 5%;
+    padding: 10% 5% 2% 5%;
 }
 
 .col-sm-6 {
     height: 100%;
-    padding: 5% 5% 2% 5%;
+    padding: 10% 5% 2% 5%;
 }
 
 .col-sm-4 {
@@ -160,6 +160,11 @@ html {
     -o-background-size: cover;
 }
 
+.community-spacer {
+    height: 100px;
+    min-height: 100px;
+}
+
 .bsc-logo {
     margin-bottom: 30px;
 }
@@ -196,9 +201,9 @@ html {
     height: 250px;
 }
 
-.children-spacer {
-    min-height: 450px;
-    height: 450px;
+.welcome-spacer {
+    min-height: 250px;
+    height: 250px;
 }
 
 .why-bg {
@@ -693,7 +698,7 @@ a.text-link > span {
 
 .video-nav {
     height: 100%;
-    padding: 0;
+    padding: 10% 0 0 0; /* diff on desktop */
     display: table;
     table-layout: fixed;
 }
@@ -735,11 +740,11 @@ a.text-link > span {
     right: 0;
     position: absolute;
     z-index: -1;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .video-tile:hover::after {
-    opacity: 0.2;
+    opacity: 0.8;
 }
 
 .video-content .title-wrap {
@@ -874,6 +879,14 @@ a.text-link > span {
         height: 100%;
     }
 
+    .col-sm-12 {
+        padding: 5% 5% 2% 5%;
+    }
+
+    .col-sm-6 {
+        padding: 5% 5% 2% 5%;
+    }
+
     .intro-bg {
         padding-top: 0 !important;
     }
@@ -889,8 +902,8 @@ a.text-link > span {
 
     .logo-img-row {
         height: 80% !important;
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top: 0; !important;
+        padding-bottom: 0; !important;
     }
 
     .underline {
@@ -916,5 +929,9 @@ a.text-link > span {
         margin: 10% auto;
         padding-left: auto;
         padding-right: auto;
+    }
+
+    .video-nav {
+        padding: 0;
     }
 }
