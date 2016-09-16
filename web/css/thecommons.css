@@ -152,7 +152,7 @@ html {
     -o-background-size: cover;
 }
 
-.community-bg {
+.bsc-bg {
     background: url(../img/bsc/bsc-bg.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -160,7 +160,7 @@ html {
     -o-background-size: cover;
 }
 
-.community-spacer {
+.bsc-spacer {
     height: 100px;
     min-height: 100px;
 }
@@ -171,6 +171,31 @@ html {
 
 .bsc-logo-img {
     width: 100%;
+}
+
+.bmw-bg {
+    background: url(../img/bmw/bmw-bg.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.bmw-logo {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.bmw-logo-img {
+    width: 90%;
+}
+
+#bmw p {
+    text-transform: uppercase;
+    text-align: center;
+}
+#bmw .bmw-bold {
+    font-weight: 700;
 }
 
 .childrens-ministry {
