@@ -88,6 +88,8 @@ function setSermonSeries(idx) {
             '</div>'
         );
 
+        audiojs.create($('audio', sermonSeriesSermons)[0]);
+
     });
 }
 
