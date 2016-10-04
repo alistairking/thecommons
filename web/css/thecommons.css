@@ -893,6 +893,13 @@ a.text-link > span {
     -o-background-size: cover;
 }
 
+.audiojs {
+    box-shadow: none;
+    background: none;
+    background-color: #231f20;
+    margin-bottom: 10px;
+}
+
 @media (min-width: 768px) {
     .row-sm-height {
         display: table;

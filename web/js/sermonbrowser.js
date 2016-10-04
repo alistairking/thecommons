@@ -62,7 +62,7 @@ function setSermonSeries(idx) {
         date.setUTCSeconds(sermon.time);
 
         var audioStr = sermon.audio ?
-        '<audio src="' + sermon.audio + '" preload="metadata" controls></audio>' : '';
+        '<audio src="' + sermon.audio + '" preload="metadata"></audio>' : '';
 
         sermonSeriesSermons.append(
             '<div class="sermon">' +

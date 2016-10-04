@@ -133,4 +133,8 @@ $(function () {
         }
     });
     panels.scrollSpy();
+
+    audiojs.events.ready(function () {
+        var as = audiojs.createAll();
+    });
 });
