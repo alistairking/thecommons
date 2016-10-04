@@ -745,11 +745,18 @@ a.text-link > span {
 }
 
 .video-content > .row {
-    height: 50%;
+    height: 100%;
 }
 
-.video-content .col-sm-4 {
+#video-all {
+    height: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#video-all .col-sm-6 {
     min-height: 180px;
+    height: 50%;
 }
 
 .video-tile {
@@ -810,6 +817,32 @@ a.text-link > span {
 .modal-content {
     display: table-cell;
     vertical-align: middle;
+}
+
+.video-content #video-feature::after {
+    background: url(../img/video-thumbs/beyond-mere-words.jpg) no-repeat top center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#beyond-mere-words .modal-body {
+    font-size: 18px;
+}
+
+#beyond-mere-words .week-cell {
+    min-height: 120px;
+    padding: 15px 15px 25px;
+}
+
+#beyond-mere-words .week-cell h4 {
+    color: #d2ac2b;
+    text-transform: uppercase;
+}
+
+#beyond-mere-words .week-cell h4 .date {
+    padding-right: 10px;
 }
 
 .video-content #video-a::after {
