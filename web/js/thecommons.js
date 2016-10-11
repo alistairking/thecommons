@@ -14,6 +14,9 @@ $(function () {
     var anchorLinks = $('.tc-sidebar a[href*=#]:not([href=#give])');
 
     function setActive(link) {
+        if (!link) {
+            return;
+        }
         history.pushState({}, '', link.hash);
         anchorLinks.parent().removeClass("active");
         $(link).parent().addClass("active");
