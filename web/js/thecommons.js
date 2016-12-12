@@ -49,7 +49,7 @@ $(function () {
     setActive($('.tc-sidebar li > a[href="' + currentPage + '"]')[0]);
 
     // show the landing alert modal
-    //$('#landing-alert').modal('show');
+    $('#landing-alert').modal('show');
 
     if ($(currentPage).hasClass('modal')) {
         $('.modal').modal('hide');
