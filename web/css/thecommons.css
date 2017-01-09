@@ -173,28 +173,33 @@ html {
     width: 100%;
 }
 
-.bmw-bg {
-    background: url(../img/bmw/bmw-bg.jpg) no-repeat bottom center scroll;
+.sas-bg {
+    background: url(../img/sas/sas-bg.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-.bmw-logo {
+.sas-logo {
     margin-bottom: 50px;
     text-align: center;
 }
 
-.bmw-logo-img {
-    width: 90%;
+.sas-logo-img {
+    width: 100%;
 }
 
-#bmw p {
+#sas p {
     text-transform: uppercase;
     text-align: center;
+    color: #FFFFFF;
 }
-#bmw .bmw-bold {
+#sas a {
+    color: #FFFFFF;
+
+}
+#sas .sas-bold {
     font-weight: 700;
 }
 
