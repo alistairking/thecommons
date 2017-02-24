@@ -11069,7 +11069,7 @@ function Calendar_constructor(element, overrides) {
 			suggestedViewHeight = heightInput() - queryToolbarsHeight();
 		}
 		else if (heightInput === 'parent') { // set to height of parent element
-			suggestedViewHeight = element.parent().height() - queryToolbarsHeight();
+			suggestedViewHeight = element.parent().height() - queryToolbarsHeight() - 72;
 		}
 		else {
 			suggestedViewHeight = Math.round(content.width() / Math.max(t.options.aspectRatio, .5));

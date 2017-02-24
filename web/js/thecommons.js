@@ -142,6 +142,11 @@ $(function () {
         events: {
             googleCalendarId: '79sheetadm35fug7l39s4linag@group.calendar.google.com'
         },
-        height: 'parent'
+        height: 'parent',
+        header: {
+            left: 'title',
+            center: '',
+            right: 'prev,next'
+        }
     });
 });
