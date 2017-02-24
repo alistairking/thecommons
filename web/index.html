@@ -17,6 +17,8 @@
     <link href="libs/lightbox/css/dark.css" rel="stylesheet"
           media="screen">
     <link href="libs/fontello/css/thecommons.css" rel="stylesheet" media="screen">
+    <link href="libs/fullcalendar/css/fullcalendar.css" rel="stylesheet"
+          media="screen">
     <link href="css/thecommons-sidebar.css" rel="stylesheet">
     <link href="css/thecommons.css" rel="stylesheet" media="screen">
     <link href="css/carousel-slides.css" rel="stylesheet" media="screen">
@@ -117,6 +119,16 @@
                 </div>
                 <div class="text">
                     Media
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#calendar">
+                <div class="icon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </div>
+                <div class="text">
+                    Calendar
                 </div>
             </a>
         </li>
@@ -921,6 +933,18 @@
         </div>
     </div>
     <div class="clearfix"></div>
+    <div class="tc-panel row" id="calendar">
+        <div class="col-sm-12">
+            <p class="header-text">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </p>
+            <p class="header-text">
+                Church Calendar
+            </p>
+            <div id="calendar-embed"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
     <div class="tc-panel row" id="footer">
         <div class="col-sm-4 col-left">
             <div class="row">
@@ -1254,6 +1278,9 @@
 
     });
 </script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+<script src='libs/fullcalendar/js/fullcalendar.js'></script>
+<script src='libs/fullcalendar/js/gcal.js'></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="js/thecommons.js"></script>
 <script src="js/sermonbrowser.js"></script>

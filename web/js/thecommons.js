@@ -136,4 +136,12 @@ $(function () {
         }
     });
     panels.scrollSpy();
+
+    $('#calendar-embed').fullCalendar({
+        googleCalendarApiKey: 'AIzaSyBfp9UvUaDnUkhGNl5Nr2ZFDvZr2iSFWm8',
+        events: {
+            googleCalendarId: '79sheetadm35fug7l39s4linag@group.calendar.google.com'
+        },
+        height: 'parent'
+    });
 });
