@@ -173,6 +173,14 @@ html {
     width: 100%;
 }
 
+.placeholder-bg {
+    background: url(../img/sunday-vertical.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .sas-bg {
     background: url(../img/sas/sas-bg.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
