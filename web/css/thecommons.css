@@ -173,6 +173,51 @@ html {
     width: 100%;
 }
 
+#events {
+    padding: 0;
+}
+
+.event {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.event div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.event img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.backyard-bg {
+    background: url(../img/events/backyard-bg.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.chbs-bg {
+    background: url(../img/events/city-heights-bg.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.a1d-bg {
+    background: url(../img/events/amor-1day-bg.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 .placeholder-bg {
     background: url(../img/sunday-vertical.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
