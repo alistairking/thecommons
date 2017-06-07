@@ -245,7 +245,7 @@ html {
 }
 
 .why-bg {
-    background: url(../img/nails.jpg) no-repeat bottom right scroll;
+    background: url(../img/palms.jpg) no-repeat bottom right scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -531,6 +531,14 @@ a.text-link > span {
 
 #sermons .series-name-img {
     max-width: 100%;
+}
+
+#sermons .series-desc {
+    color: #fff;
+}
+
+#sermons .series-spacer {
+    height: 50px;
 }
 
 .series-header.row {

@@ -35,7 +35,12 @@ function setSermonSeries(idx) {
     if (series.cover_fg) {
         $('#sermon-series-fg').html(
             '<img class="series-name-img" ' +
-            'src="' + series.cover_fg + '"/>'
+            'src="' + series.cover_fg + '"/>' +
+            '<div class="series-spacer"></div>' +
+            ((series.desc && series.desc.length) ?
+                '<p class="series-desc text-left">' + series.desc + '</p>' : ''
+            ) +
+            '<div class="series-spacer"></div>'
         );
     } else {
         $('#sermon-series-fg').html('');
