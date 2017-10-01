@@ -315,6 +315,11 @@ html {
     height: 50%;
 }
 
+.ecclesia img {
+    height: 21px;
+    vertical-align: top;
+}
+
 .invert-bg {
     /*background-color: #fff;*/
     background-color: #231f20;
