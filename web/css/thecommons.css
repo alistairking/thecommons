@@ -177,21 +177,17 @@ html {
     padding: 0;
 }
 
-.event {
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-}
-
-.event div {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.event img {
+.event-img {
     max-width: 80%;
     max-height: 80%;
+}
+
+.events-bg {
+    background: url(../img/events/city-heights-outreach-bg.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
 .backyard-bg {
