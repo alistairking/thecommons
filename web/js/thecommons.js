@@ -24,7 +24,7 @@ $(function () {
 
     function scrollTo(target, link) {
         var offset = target.offset().top - $('.tc-topbar').height();// + 1;
-        body.stop().animate({
+        $('html, body').stop().animate({
             scrollTop: offset
         }, 300);
         setActive(link);
