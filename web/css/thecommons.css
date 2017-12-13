@@ -348,8 +348,8 @@ html {
 }
 
 .logo-img {
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
 }
 
 .logo-tag-cell {
@@ -1021,10 +1021,12 @@ a.text-link > span {
         padding-top: 0 !important;
     }
 
+    /*
     .logo-img {
         width: 70%;
         height: 70%;
     }
+    */
 
     .logo-tag-row {
         height: 10% !important;
