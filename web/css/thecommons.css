@@ -94,6 +94,16 @@ html {
     padding: 10% 5% 2% 5%;
 }
 
+.col-sm-7 {
+    height: 100%;
+    padding: 10% 5% 2% 5%;
+}
+
+.col-sm-5 {
+    height: 100%;
+    padding: 10% 5% 2% 5%;
+}
+
 .col-sm-4 {
     height: 100%;
 }
@@ -177,13 +187,25 @@ html {
     padding: 0;
 }
 
+.event {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.event div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
 .event-img {
     max-width: 80%;
     max-height: 80%;
 }
 
 .events-bg {
-    background: url(../img/events/city-heights-outreach-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/events/table.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -1014,6 +1036,14 @@ a.text-link > span {
     }
 
     .col-sm-6 {
+        padding: 5% 5% 2% 5%;
+    }
+
+    .col-sm-7 {
+        padding: 5% 5% 2% 5%;
+    }
+
+    .col-sm-5 {
         padding: 5% 5% 2% 5%;
     }
 

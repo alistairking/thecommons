@@ -127,6 +127,67 @@ $(function () {
         }
     });
 
+    $('#if-signup-btn').click(function (e) {
+        var alertDiv = $('#if-form-alert');
+
+        var nameFirst = $('#if-nameFirst').val();
+        var nameLast = $('#if-nameLast').val();
+        var email = $('#if-email').val();
+        var phone = $('#if-phone').val();
+
+        var errorStr = "Missing information for: ";
+        var errors = [];
+        if (!nameFirst) {
+            errors.push("First Name");
+        }
+        if (!nameLast) {
+            errors.push("Last Name");
+        }
+        if (!email) {
+            errors.push("Email Address");
+        }
+        if (!phone) {
+            errors.push("Phone Number");
+        }
+        if (errors.length) {
+            alertDiv.css('visibility', 'visible');
+            alertDiv.html(errorStr + errors.join(", "));
+        } else {
+            alertDiv.css('visibility', 'visible');
+
+            alertDiv.html("Please wait...");
+
+            $.post("/backend/if-signup.php",
+                {
+                    'if-signup': true,
+                    'if-nameFirst': nameFirst,
+                    'if-nameLast': nameLast,
+                    'if-email': email,
+                    'if-phone': phone
+                },
+                function (result) {
+                    if (!result['success']) {
+                        alertDiv.css('visibility', 'visible');
+                        alertDiv.html("Failed to save details. Please try again.");
+                        return;
+                    }
+
+                    // leave the please wait message and details in place while we redirect to paypal
+                    /*
+                    $('#if-nameFirst').val('');
+                    $('#if-nameLast').val('');
+                    $('#if-email').val('');
+                    $('#if-phone').val('');
+
+                    alertDiv.html("");
+                    */
+
+                    // send them on to paypal
+                    window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EMPSADLEZRJ8N"
+                });
+        }
+    });
+
     var panels = $('.tc-panel');
     panels.on('scrollSpy:enter', function () {
         var panelId = $(this).attr('id');
