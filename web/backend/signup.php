@@ -1,14 +1,18 @@
 <?php
 
 function do_mail() {
-    if(!$_POST['if-signup']) {
+    if(!$_POST['tc-signup']) {
         return false;
     }
 
-    $to = "IfGathering Signup <info@thecommonsforall.com>, "
-        ."Aubrey Westlund <aubreywestlund@gmail.com>";
+    $event = $_POST['event'];
+    if (!$event) {
+        return false;
+    }
 
-    $subject = "[thecommonsforall.com] If:Gathering Signup";
+    $to = "The Commons Signup <info@thecommonsforall.com>";
+
+    $subject = "[thecommons.church] Event Signup ($event)";
 
     // compose headers
     $headers = "From: info@thecommonsforall.com\r\n";
@@ -16,17 +20,18 @@ function do_mail() {
     $headers .= "X-Mailer: PHP/".phpversion();
 
     // get the details
-    $nameFirst = $_POST['if-nameFirst'];
-    $nameLast = $_POST['if-nameLast'];
-    $email = $_POST['if-email'];
-    $phone = $_POST['if-phone'];
+    $nameFirst = $_POST['nameFirst'];
+    $nameLast = $_POST['nameLast'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
 
     // need all fields
     if(!$nameFirst || !$nameLast || !$email || !$phone) {
         return false;
     }
 
-    $message = "First Name: $nameFirst \r\n"
+    $message = "Event: $event\r\n"
+        ."First Name: $nameFirst \r\n"
         ."Last Name: $nameLast \r\n"
         ."Email Address: $email \r\n"
         ."Phone Number: $phone \r\n";

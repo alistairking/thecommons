@@ -127,13 +127,14 @@ $(function () {
         }
     });
 
-    $('#if-signup-btn').click(function (e) {
-        var alertDiv = $('#if-form-alert');
+    $('#event-a-signup-btn').click(function (e) {
+        var alertDiv = $('#event-a-form-alert');
 
-        var nameFirst = $('#if-nameFirst').val();
-        var nameLast = $('#if-nameLast').val();
-        var email = $('#if-email').val();
-        var phone = $('#if-phone').val();
+        var event = 'baptism';
+        var nameFirst = $('#event-a-nameFirst').val();
+        var nameLast = $('#event-a-nameLast').val();
+        var email = '[not-requested]';
+        var phone = '[not-requested]';
 
         var errorStr = "Missing information for: ";
         var errors = [];
@@ -157,13 +158,14 @@ $(function () {
 
             alertDiv.html("Please wait...");
 
-            $.post("/backend/if-signup.php",
+            $.post("/backend/signup.php",
                 {
-                    'if-signup': true,
-                    'if-nameFirst': nameFirst,
-                    'if-nameLast': nameLast,
-                    'if-email': email,
-                    'if-phone': phone
+                    'tc-signup': true,
+                    'event': event,
+                    'nameFirst': nameFirst,
+                    'nameLast': nameLast,
+                    'email': email,
+                    'phone': phone
                 },
                 function (result) {
                     if (!result['success']) {
@@ -172,18 +174,71 @@ $(function () {
                         return;
                     }
 
-                    // leave the please wait message and details in place while we redirect to paypal
-                    /*
-                    $('#if-nameFirst').val('');
-                    $('#if-nameLast').val('');
-                    $('#if-email').val('');
-                    $('#if-phone').val('');
+                    $('#event-a-nameFirst').val('');
+                    $('#event-a-nameLast').val('');
 
-                    alertDiv.html("");
-                    */
+                    alertDiv.html("Thanks! You can now register another person.");
 
                     // send them on to paypal
-                    window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EMPSADLEZRJ8N"
+                    //window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EMPSADLEZRJ8N"
+                });
+        }
+    });
+
+    $('#event-b-signup-btn').click(function (e) {
+        var alertDiv = $('#event-b-form-alert');
+
+        var event = 'camping';
+        var nameFirst = $('#event-b-nameFirst').val();
+        var nameLast = $('#event-b-nameLast').val();
+        var email = '[not-requested]';
+        var phone = '[not-requested]';
+
+        var errorStr = "Missing information for: ";
+        var errors = [];
+        if (!nameFirst) {
+            errors.push("First Name");
+        }
+        if (!nameLast) {
+            errors.push("Last Name");
+        }
+        if (!email) {
+            errors.push("Email Address");
+        }
+        if (!phone) {
+            errors.push("Phone Number");
+        }
+        if (errors.length) {
+            alertDiv.css('visibility', 'visible');
+            alertDiv.html(errorStr + errors.join(", "));
+        } else {
+            alertDiv.css('visibility', 'visible');
+
+            alertDiv.html("Please wait...");
+
+            $.post("/backend/signup.php",
+                {
+                    'tc-signup': true,
+                    'event': event,
+                    'nameFirst': nameFirst,
+                    'nameLast': nameLast,
+                    'email': email,
+                    'phone': phone
+                },
+                function (result) {
+                    if (!result['success']) {
+                        alertDiv.css('visibility', 'visible');
+                        alertDiv.html("Failed to save details. Please try again.");
+                        return;
+                    }
+
+                    $('#event-b-nameFirst').val('');
+                    $('#event-b-nameLast').val('');
+
+                    alertDiv.html("Thanks! You can now register another person.");
+
+                    // send them on to paypal
+                    //window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EMPSADLEZRJ8N"
                 });
         }
     });

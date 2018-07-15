@@ -1,0 +1,167 @@
+#event-a {
+    background: url(../img/events/baptism.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center bottom;
+}
+
+#event-b {
+    background: url(../img/events/camping.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-position: center bottom;
+}
+
+.event-signup > div {
+    height: 100%;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.event-signup > div > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.event-signup .title-text {
+    color: #d2ac2b;
+    background-color: #231f20;
+
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 700; /* heavy */
+    vertical-align: middle;
+}
+
+.event-signup .header-text {
+    font-size: 30px;
+    text-transform: none;
+}
+
+.event-signup .header-text,
+.event-signup .hero-text,
+.event-signup p {
+    color: #FFFFFF;
+    /* color: #fff; */
+}
+
+.event-signup .blurb {
+    margin-top: 0;
+}
+
+.event-signup .main-text {
+    margin-top: 50px;
+}
+
+.event-signup #event-a-form-alert,
+.event-signup #event-b-form-alert {
+    visibility: hidden;
+    color: #fff;
+}
+
+.event-signup #event-a-signup-form,
+.event-signup #event-b-signup-form{
+    margin-top: 20px;
+}
+
+.event-signup .form-inline {
+    margin-top: 10px;
+}
+
+.event-signup .form-inline ~ .form-inline {
+    margin-top: 20px;
+}
+
+.event-signup .form-control {
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    /*border: 2px solid;*/
+    /*border-color: #d2ac2b;*/
+    border: 0;
+    /*border-color: #fff;*/
+    /*background-color: rgba(0, 0, 0, 0);*/
+    /*background-color: #231f20;*/
+    background-color: #fff;
+    /*color: #231f20;*/
+
+    margin: 0;
+
+    font-size: 20px;
+    height: 50px;
+}
+
+.event-signup .btn {
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    border: 0;
+    background-color: #d2ac2b;
+    /*background-color: #fff;*/
+    color: #231f20;
+
+    margin: 0;
+
+    font-size: 20px;
+    height: 50px;
+    width: 220px;
+}
+
+.event-signup .info-row {
+    margin-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.event-signup .info-row > .col-sm-3 {
+
+}
+
+.event-signup .info-row > .col-sm-3 ~ .col-sm-3 {
+    margin-top: 25px;
+    padding-top: 25px;
+
+    border-top: 2px solid;
+    border-left: 0;
+    border-color: #d2ac2b;
+}
+
+.event-signup .info-row .header-text {
+    margin-bottom: 20px;
+}
+
+.event-signup .info-row p {
+    font-size: 15px;
+}
+
+.event-signup .info-row a,
+.event-signup .info-row button {
+    font-size: 15px;
+    color: #d2ac2b;
+    text-decoration: underline;
+    border: 0;
+    background: none;
+}
+
+.event-signup .spacer {
+    height: 30px;
+}
+
+@media (min-width: 768px) {
+
+    .event-signup .info-row > .col-sm-3 ~ .col-sm-3 {
+        margin-top: 0;
+        padding-top: 0;
+
+        border-top: 0;
+        border-left: 2px solid;
+        border-color: #d2ac2b;
+    }
+
+}
