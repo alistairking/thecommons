@@ -116,6 +116,10 @@ html {
     height: 33.333333%;
 }
 
+.quarter-row {
+    height: 25%;
+}
+
 .no-margin {
     margin: 0;
 }
@@ -802,39 +806,100 @@ a.text-link > span {
     float: none !important;
 }
 
-.video-nav-wrapper {
+#blog {
+    height: 100%;
+}
+
+.blog-nav-wrapper {
     height: 17%;
     max-height: 17%;
     min-height: 90px;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #231f20;
 }
 
-.video-nav {
+.blog-nav {
     height: 100%;
     padding: 10% 0 0 0; /* diff on desktop */
     display: table;
     table-layout: fixed;
 }
 
-.video-nav-middle {
+.blog-nav-middle {
     display: table-cell;
     vertical-align: middle;
 }
 
-.video-nav .header-text {
-    border-color: #231f20;
+.blog-nav .header-text {
+    border-color: #ffffff;
     border-bottom: 3px solid;
     padding-bottom: 10px;
-    color: #231f20;
+    color: #ffffff;
 }
 
-.video-content {
+.blog-content {
     height: 83%;
 }
 
-.video-content > .row {
+.blog-content > .row {
+}
+
+.blog-content > .row.first {
+    height: 50%;
+}
+
+.blog-content > .row.all {
+    height: 25%;
+}
+
+.blog-article > div {
+    margin: 2% 5% 5% 5%;
     height: 100%;
+}
+
+.blog-article .date,
+.blog-article .title {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700; /* heavy */
+    vertical-align: middle;
+}
+
+.blog-article .date {
+    font-size: 24px;
+}
+
+.blog-article .title {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.blog-article .content {
+    color: #ffffff;
+    font-size: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-article .content.short {
+    height: 50%;
+    max-height: 100px;
+}
+
+.blog-article .content.short:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(rgba(35, 31, 32, 0) 30px, #231f20);
+    pointer-events: none;
+}
+
+.blog-article a {
+    color: #fff;
 }
 
 #video-all {
@@ -1094,6 +1159,12 @@ a.text-link > span {
     }
 
     .video-nav {
-        padding: 0;
+        padding: 10px 0;
+    }
+
+    .blog-nav-wrapper {
+        min-height: auto;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
