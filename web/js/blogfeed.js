@@ -65,8 +65,8 @@ $(function () {
             var monthIndex = date.getMonth();
             var year = date.getFullYear();
             var dateStr = MONTHS[monthIndex] + " " + day + ", " + year;
-            var rowClass = idx === 0 ? "first" : "all";
-            var contentClass = idx === 0 ? "short" : "hidden";
+            var rowClass = "all";//idx === 0 ? "first" : "all";
+            var contentClass = "short";//idx === 0 ? "short" : "hidden";
             blogContent.append(
                 '<div id="blog-article-' + idx + '" class="row blog-article ' + rowClass + '" style="background-color: ' + BG_COLORS[idx] + ';">' +
                 '<div>' +
