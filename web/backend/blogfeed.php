@@ -2,7 +2,7 @@
 
 # Open the cURL session
 $curlSession = curl_init();
-curl_setopt($curlSession, CURLOPT_URL, "http://blog.thecommons.church/feed/json");
+curl_setopt($curlSession, CURLOPT_URL, "http://news.thecommons.church/feed/json");
 curl_setopt($curlSession, CURLOPT_HEADER, 1);
 curl_setopt($curlSession, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($curlSession, CURLOPT_TIMEOUT, 30);
