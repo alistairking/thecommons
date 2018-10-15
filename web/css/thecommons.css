@@ -216,30 +216,6 @@ html {
     -o-background-size: cover;
 }
 
-.backyard-bg {
-    background: url(../img/events/backyard-bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.chbs-bg {
-    background: url(../img/events/city-heights-bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.a1d-bg {
-    background: url(../img/events/amor-1day-bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
 .placeholder-bg {
     background: url(../img/sunday-vertical.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
@@ -289,16 +265,6 @@ html {
     background-size: cover;
     -o-background-size: cover;
     background-position: center bottom;
-}
-
-.comm-bg {
-    background: url(../img/band.jpg) no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    background-position: center bottom;
-    min-height: 750px;
 }
 
 .qb-spacer {
@@ -806,55 +772,63 @@ a.text-link > span {
     float: none !important;
 }
 
-#blog {
+#news {
     height: 100%;
-}
-
-.blog-nav-wrapper {
-    height: 17%;
-    max-height: 17%;
-    min-height: 90px;
-    padding-left: 5%;
-    padding-right: 5%;
+    min-height: unset;
     background-color: #231f20;
 }
 
-.blog-nav {
-    height: 100%;
-    padding: 10% 0 0 0; /* diff on desktop */
-    display: table;
-    table-layout: fixed;
+.news-header.row {
+    height: auto;
 }
 
-.blog-nav-middle {
-    display: table-cell;
-    vertical-align: middle;
+.news-header .row {
+    padding-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
-.blog-nav .header-text {
-    border-color: #ffffff;
-    border-bottom: 3px solid;
-    padding-bottom: 10px;
+.news-header-content {
+    color: #d2ac2b;
+}
+
+.news-header-content .col-xs-6 {
+    padding: 0;
+    height: 50px;
+}
+
+.news-header .header-text {
+    color: #d2ac2b;
+}
+
+.news-nav {
+    color: #d2ac2b;
+    font-size: 24px;
+}
+
+.news-nav > span:focus,
+.news-nav > span:hover {
     color: #ffffff;
+    cursor: pointer;
 }
 
-.blog-content {
-    height: 83%;
+.news-nav > span.disabled {
+    opacity: 0.2;
 }
 
-.blog-content > .row {
+.news-nav > span.disabled:focus,
+.news-nav > span.disabled:hover {
+    color: #d2ac2b !important;
 }
 
-.blog-content > .row.first {
-    height: 50%;
-}
-
-.blog-content > .row.all {
-    height: 33.3333333%;
+.blog-article {
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .blog-article > div {
-    margin: 1% 5% 5% 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     height: 100%;
 }
 
@@ -882,19 +856,19 @@ a.text-link > span {
     position: relative;
 }
 
-.blog-article .content.short {
-    height: 50%;
-    max-height: 100px;
+.blog-article .content {
+    /*visibility: hidden;*/
 }
 
-.blog-article .content.short:before {
+.blog-article:before {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
+    z-index: 1000;
     left: 0;
     top: 0;
-    background: linear-gradient(rgba(35, 31, 32, 0) 30px, #231f20);
+    background: linear-gradient(rgba(35, 31, 32, 0) 20%, #231f20);
     pointer-events: none;
 }
 
@@ -1090,6 +1064,21 @@ a.text-link > span {
 
 /* END same-height columns */
 
+@media (min-width: 992px) {
+    .blog-article {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .blog-article.first {
+        padding-left: 5%;
+    }
+
+    .blog-article.last {
+        padding-right: 5%;
+    }
+}
+
 @media (min-width: 768px) {
     .container-fluid > .row {
         min-height: 100%;
@@ -1160,11 +1149,5 @@ a.text-link > span {
 
     .video-nav {
         padding: 10px 0;
-    }
-
-    .blog-nav-wrapper {
-        min-height: auto;
-        padding-left: 0;
-        padding-right: 0;
     }
 }
