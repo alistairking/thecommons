@@ -352,7 +352,6 @@ html {
     color: #d2ac2b;
     font-size: 18px;
     text-transform: uppercase;
-    /*opacity: 0.2;*/
 }
 
 .logo-img-row {
@@ -361,17 +360,15 @@ html {
     padding-bottom: 5%;
 }
 
-.logo-img-cell {
+.logo-img-middle {
+    display: inline-block;
     height: 100%;
-}
-
-.logo-push {
-    height: 30%;
+    vertical-align: middle;
 }
 
 .logo-img {
-    width: 50%;
-    height: 50%;
+    height: 90%;
+    vertical-align: middle;
 }
 
 .logo-tag-cell {
@@ -1050,13 +1047,6 @@ a.text-link > span {
     .intro-bg {
         padding-top: 0 !important;
     }
-
-    /*
-    .logo-img {
-        width: 70%;
-        height: 70%;
-    }
-    */
 
     .logo-tag-row {
         height: 10% !important;
