@@ -47,6 +47,7 @@ $(function () {
 
     var currentPage = location.hash ? location.hash : '#home';
     setActive($('.tc-sidebar li > a[href="' + currentPage + '"]')[0]);
+    scrollTo($(currentPage)); // force scrolling to include topnav on mobile
 
     // show the landing alert modal
     //$('#landing-alert').modal('show');
@@ -133,7 +134,7 @@ $(function () {
         var event = 'baptism';
         var nameFirst = $('#event-a-nameFirst').val();
         var nameLast = $('#event-a-nameLast').val();
-        var email = '[not-requested]';
+        var email = $('#event-a-email').val();
         var phone = '[not-requested]';
 
         var errorStr = "Missing information for: ";
