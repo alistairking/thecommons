@@ -131,7 +131,7 @@ $(function () {
     $('#event-a-signup-btn').click(function (e) {
         var alertDiv = $('#event-a-form-alert');
 
-        var event = 'baptism';
+        var event = 'launch-team';
         var nameFirst = $('#event-a-nameFirst').val();
         var nameLast = $('#event-a-nameLast').val();
         var email = $('#event-a-email').val();
