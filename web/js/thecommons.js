@@ -11,7 +11,7 @@ $(function () {
     var sidebar = $('.tc-sidebar');
 
     var body = $('html body');
-    var anchorLinks = $('.tc-sidebar a[href*=#]:not([href=#give])');
+    var anchorLinks = $('.tc-sidebar a[href*=#]:not([href=#give],[href=#signup])');
 
     function setActive(link) {
         if (!link) {
