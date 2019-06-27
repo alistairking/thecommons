@@ -72,177 +72,6 @@ $(function () {
         sidebar.addClass('tc-sidebar-hidden');
     });
 
-    $('#amor-signup-btn').click(function(e) {
-        var alertDiv = $('#amor-form-alert');
-
-        var nameFirst = $('#amor-nameFirst').val();
-        var nameLast = $('#amor-nameLast').val();
-        var email = $('#amor-email').val();
-        var phone = $('#amor-phone').val();
-
-        var errorStr = "Missing information for: ";
-        var errors = [];
-        if(!nameFirst) {
-            errors.push("First Name");
-        }
-        if (!nameLast) {
-            errors.push("Last Name");
-        }
-        if (!email) {
-            errors.push("Email Address");
-        }
-        if (!phone) {
-            errors.push("Phone Number");
-        }
-        if(errors.length) {
-            alertDiv.css('visibility', 'visible');
-            alertDiv.html(errorStr + errors.join(", "));
-        } else {
-            alertDiv.css('visibility', 'visible');
-
-            alertDiv.html("Saving Details...");
-
-            $.post("/backend/amor-signup.php",
-                {
-                    'amor-signup': true,
-                    'amor-nameFirst': nameFirst,
-                    'amor-nameLast': nameLast,
-                    'amor-email': email,
-                    'amor-phone': phone
-                },
-                function (result) {
-                    if (!result['success']) {
-                        alertDiv.css('visibility', 'visible');
-                        alertDiv.html("Failed to save details. Please try again.");
-                        return;
-                    }
-
-                    $('#amor-nameFirst').val('');
-                    $('#amor-nameLast').val('');
-                    $('#amor-email').val('');
-                    $('#amor-phone').val('');
-
-                    alertDiv.html("Done. You can now register another person.");
-                });
-        }
-    });
-
-    $('#event-a-signup-btn').click(function (e) {
-        var alertDiv = $('#event-a-form-alert');
-
-        var event = 'baptism';
-        var nameFirst = $('#event-a-nameFirst').val();
-        var nameLast = $('#event-a-nameLast').val();
-        var email = '[not-requested]';
-        var phone = '[not-requested]';
-
-        var errorStr = "Missing information for: ";
-        var errors = [];
-        if (!nameFirst) {
-            errors.push("First Name");
-        }
-        if (!nameLast) {
-            errors.push("Last Name");
-        }
-        if (!email) {
-            errors.push("Email Address");
-        }
-        if (!phone) {
-            errors.push("Phone Number");
-        }
-        if (errors.length) {
-            alertDiv.css('visibility', 'visible');
-            alertDiv.html(errorStr + errors.join(", "));
-        } else {
-            alertDiv.css('visibility', 'visible');
-
-            alertDiv.html("Please wait...");
-
-            $.post("/backend/signup.php",
-                {
-                    'tc-signup': true,
-                    'event': event,
-                    'nameFirst': nameFirst,
-                    'nameLast': nameLast,
-                    'email': email,
-                    'phone': phone
-                },
-                function (result) {
-                    if (!result['success']) {
-                        alertDiv.css('visibility', 'visible');
-                        alertDiv.html("Failed to save details. Please try again.");
-                        return;
-                    }
-
-                    $('#event-a-nameFirst').val('');
-                    $('#event-a-nameLast').val('');
-
-                    alertDiv.html("Thanks! You can now register another person.");
-
-                    // send them on to paypal
-                    //window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EMPSADLEZRJ8N"
-                });
-        }
-    });
-
-    $('#event-b-signup-btn').click(function (e) {
-        var alertDiv = $('#event-b-form-alert');
-
-        var event = 'camping';
-        var nameFirst = $('#event-b-nameFirst').val();
-        var nameLast = $('#event-b-nameLast').val();
-        var email = '[not-requested]';
-        var phone = '[not-requested]';
-
-        var errorStr = "Missing information for: ";
-        var errors = [];
-        if (!nameFirst) {
-            errors.push("First Name");
-        }
-        if (!nameLast) {
-            errors.push("Last Name");
-        }
-        if (!email) {
-            errors.push("Email Address");
-        }
-        if (!phone) {
-            errors.push("Phone Number");
-        }
-        if (errors.length) {
-            alertDiv.css('visibility', 'visible');
-            alertDiv.html(errorStr + errors.join(", "));
-        } else {
-            alertDiv.css('visibility', 'visible');
-
-            alertDiv.html("Please wait...");
-
-            $.post("/backend/signup.php",
-                {
-                    'tc-signup': true,
-                    'event': event,
-                    'nameFirst': nameFirst,
-                    'nameLast': nameLast,
-                    'email': email,
-                    'phone': phone
-                },
-                function (result) {
-                    if (!result['success']) {
-                        alertDiv.css('visibility', 'visible');
-                        alertDiv.html("Failed to save details. Please try again.");
-                        return;
-                    }
-
-                    $('#event-b-nameFirst').val('');
-                    $('#event-b-nameLast').val('');
-
-                    alertDiv.html("Thanks! You can now register another person.");
-
-                    // send them on to paypal
-                    //window.location.href = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EMPSADLEZRJ8N"
-                });
-        }
-    });
-
     var panels = $('.tc-panel');
     panels.on('scrollSpy:enter', function () {
         var panelId = $(this).attr('id');
@@ -252,6 +81,24 @@ $(function () {
         }
     });
     panels.scrollSpy();
+
+    $('#map').height($('#mapbox').height());
+    $(window).on('resize', function() {
+        $('#map').height($('#mapbox').height());
+    });
+
+    const map = L.map('map', {
+        // zoomControl: false,
+        scrollWheelZoom: false
+    }).setView([32.678954, -117.100560], 13);
+    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy;<a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1IjoidGhlY29tbW9ucyIsImEiOiI1N0NTWGNjIn0.TaOENKLg7ELtwKzbi2HqZw'
+    }).addTo(map);
+    const addrMarker = L.marker([32.678954, -117.100560]).addTo(map);
+    addrMarker.bindPopup("<b>Here we are!</b><br/>635 E 7th St<br/>National City CA").openPopup();
 
     $('#calendar-embed').fullCalendar({
         googleCalendarApiKey: 'AIzaSyBfp9UvUaDnUkhGNl5Nr2ZFDvZr2iSFWm8',

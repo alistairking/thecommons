@@ -133,192 +133,36 @@ html {
 .intro-bg {
     height: 100% !important;
     width: 100%;
-    /*
-    background: url(../img/home-bg2.jpg) no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    */
 }
 
-.intro-bg > .col-sm-12 {
-    /*background: rgba(35, 31, 32, .3);*/
+#mapbox {
+    padding: 0;
 }
 
-.qb-bg {
+#map {
+    height: 200px;
+}
+
+.sundays-bg {
+    background-color: #52b5c8;
+}
+
+.XXX-example-bg {
     background: url(../img/sunday-gathering-tall.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    /*min-height: 750px;*/
 }
 
-.sundays-bg {
-    background: url(../img/NPland2.jpg) no-repeat bottom left scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.bsc-bg {
-    background: url(../img/bsc/bsc-bg.jpg) no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.bsc-spacer {
-    height: 100px;
-    min-height: 100px;
-}
-
-.bsc-logo {
-    margin-bottom: 30px;
-}
-
-.bsc-logo-img {
-    width: 100%;
-}
-
-#events {
-    padding: 0;
-}
-
-.event {
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-}
-
-.event div {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.event-img {
-    max-width: 80%;
-    max-height: 80%;
-}
-
-.events-bg {
-    background: url(../img/events/table.jpg) no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.backyard-bg {
-    background: url(../img/events/backyard-bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.chbs-bg {
-    background: url(../img/events/city-heights-bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.a1d-bg {
-    background: url(../img/events/amor-1day-bg.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.placeholder-bg {
-    background: url(../img/sunday-vertical.jpg) no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.sas-bg {
-    background: url(../img/sas/sas-bg.jpg) no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.sas-logo {
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.sas-logo-img {
-    width: 100%;
-}
-
-#sas p {
-    text-transform: uppercase;
-    text-align: center;
-    color: #FFFFFF;
-}
-#sas a {
-    color: #FFFFFF;
-
-}
-#sas .sas-bold {
-    font-weight: 700;
+.XXX-example-spacer {
+    min-height: 250px;
+    height: 250px;
 }
 
 .childrens-ministry {
     margin-top: 20px;
-}
-
-.children-bg {
-    background: url(../img/children.jpg) no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    background-position: center bottom;
-}
-
-.comm-bg {
-    background: url(../img/band.jpg) no-repeat bottom center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    background-position: center bottom;
-    min-height: 750px;
-}
-
-.qb-spacer {
-    min-height: 250px;
-    height: 250px;
-}
-
-.welcome-spacer {
-    min-height: 250px;
-    height: 250px;
-}
-
-.why-bg {
-    background: url(../img/palms.jpg) no-repeat bottom right scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    background-position: right bottom;
-}
-
-.mission-spacer {
-    min-height: 50px;
-    height: 50px;
 }
 
 .mission-img {
@@ -343,7 +187,6 @@ html {
 }
 
 .invert-bg {
-    /*background-color: #fff;*/
     background-color: #231f20;
 }
 
@@ -432,7 +275,6 @@ html {
 }
 
 .invert-text {
-    /*color: #231f20;*/
     color: #ffffff;
 }
 
@@ -472,6 +314,7 @@ a.text-link > span {
     padding-left: 5%;
     padding-right: 5%;
     color: #fff;
+    color: #52b5c8;
 }
 
 .mission-text-top {
@@ -492,83 +335,6 @@ a.text-link > span {
 .icon-inline {
     display: inline-block;
     margin-right: 10px;
-}
-
-.staff-col {
-    padding: 0 !important;
-}
-
-.staff-img {
-    height: 100%;
-    min-height: 200px;
-    margin: 0;
-    padding: 0;
-}
-
-.staff-jon {
-    background: url(../img/staff/jon-nichols.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.staff-jeremey {
-    background: url(../img/staff/jeremey-glazier.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.staff-ryan {
-    background: url(../img/staff/ryan-english.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.staff-alistair {
-    background: url(../img/staff/alistair-king.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.staff-andy {
-    background: url(../img/staff/andy-lyde.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.staff-damin {
-    background: url(../img/staff/damin-sterling.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.row.staff {
-    height: auto !important;
-}
-
-
-.staff-label-bg {
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-    background-color: #231f20;
-    opacity: 0.6;
-}
-
-.staff-label {
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-    text-align: center;
-    padding-top: 8px;
-    line-height: 100%;
-}
-
-.staff-name {
-    color: #d2ac2b;
-    font-weight: 700; /* heavy */
-    font-size: 18px;
-    margin-bottom: 0;
-}
-
-.staff-role {
-    color: #d2ac2b;
-    font-size: 16px;
 }
 
 /* MISSION */
@@ -797,91 +563,6 @@ a.text-link > span {
 .col-xs-height {
     display: table-cell;
     float: none !important;
-}
-
-.video-nav-wrapper {
-    height: 17%;
-    max-height: 17%;
-    min-height: 90px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.video-nav {
-    height: 100%;
-    padding: 10% 0 0 0; /* diff on desktop */
-    display: table;
-    table-layout: fixed;
-}
-
-.video-nav-middle {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.video-nav .header-text {
-    border-color: #231f20;
-    border-bottom: 3px solid;
-    padding-bottom: 10px;
-    color: #231f20;
-}
-
-.video-content {
-    height: 83%;
-}
-
-.video-content > .row {
-    height: 100%;
-}
-
-#video-all {
-    height: 100%;
-    padding-right: 0;
-    padding-left: 0;
-}
-
-#video-all .col-sm-6 {
-    min-height: 180px;
-    height: 50%;
-}
-
-.video-tile {
-    display: block;
-    position: relative;
-}
-
-.video-tile::after {
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    opacity: 1;
-}
-
-.video-tile:hover::after {
-    opacity: 0.8;
-}
-
-.video-content .title-wrap {
-    display: table;
-    table-layout: fixed;
-    height: 100%;
-    width: 100%;
-    min-height: 180px;
-}
-
-.video-content .icon {
-    font-size: 40px;
-}
-
-.video-content .title-content {
-    display: table-cell;
-    vertical-align: middle;
-    color: #fff;
-    font-size: 20px;
 }
 
 /* tweaks for lightbox */

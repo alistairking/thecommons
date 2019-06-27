@@ -7,11 +7,15 @@
     <!-- Start the first background image loading ASAP -->
     <script>
         var bg = new Image();
-        bg.src = "../img/carousel/amor-women.jpg";
+        bg.src = "../img/carousel/natl-city-bldg.jpg";
     </script>
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
           rel="stylesheet" media="screen">
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
     <link href="libs/lightbox/css/ekko-lightbox.css" rel="stylesheet"
           media="screen">
     <link href="libs/lightbox/css/dark.css" rel="stylesheet"
@@ -164,11 +168,13 @@
              data-pause="false">
             <div class="carousel-inner">
                 <div class="item active"></div>
+                <!--
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
+                -->
             </div>
             <div class="carousel-content">
                 <div class="col-sm-12 no-pad">
@@ -187,7 +193,7 @@
                     <div class="row logo-img-row text-center">
                         <span class="logo-img-middle"></span>
                         <img class="logo-img"
-                             src="img/tc-logo-gold-v2.svg"/>
+                             src="img/tc-south-stamp-blue.svg"/>
                     </div>
                     <div class="row logo-tag-row hidden-xs">
                         <div class="col-sm-6 logo-tag-cell no-pad">
@@ -207,8 +213,8 @@
     </div>
     <div class="clearfix"></div>
     <div class="tc-panel row sundays-bg" id="sundays">
-        <div class="col-sm-6">
-            Fancy map thing goes here.
+        <div class="col-sm-6" id="mapbox">
+            <div id="map"></div>
         </div>
         <div class="col-sm-6">
             <div class="underline">
@@ -216,23 +222,22 @@
                     Our Gathering
                 </p>
             </div>
+
             <div class="header-text">
                 <i class="icon icon-inline icon-commons-gathering"></i>
                 <p class="header-inline">
                     Sunday Gathering<br>
-                    10:30AM @ Queen Bee's
+                    09:00AM @ First Baptist Church of National City
                 </p>
             </div>
             <p>
-                <a
-                        class="text-link"
-                        href="https://www.google.com/maps/dir/Current+Location/3925+Ohio+St+San+Diego+CA+92104"
-                        target="_blank">
-                            <span>
-                                3925 Ohio Street <i class="icon-angle-right"></i>
-                            </span>
-                </a><br>
-                Free parking adjacent to building.
+                <a class="text-link"
+                   href="https://www.google.com/maps/dir/Current+Location/635+E+7th+St+National+City+CA+91950"
+                   target="_blank">
+                    <span>
+                        635 E 7th St, National City, CA 91950 <i class="icon-angle-right"></i>
+                    </span>
+                </a>
             </p>
             <p>
                 We are a casual, welcoming community. You can
@@ -244,16 +249,26 @@
             <div class="header-text childrens-ministry">
                 <i class="icon icon-inline icon-commons-childrens"></i>
                 <p class="header-inline">
-                    Children's Ministry & Nursery
+                    Parking
                 </p>
             </div>
             <p class="no-margin">
-                Through singing, games, activities, arts, and
-                crafts we hope to cultivate and encourage
-                spiritual growth in your children. All childcare
-                workers have been trained and have undergone
-                background checks to ensure the safety of your
-                child.
+                Parking lot in rear of Sanctuary building and street parking are
+                available.
+            </p>
+
+            <div class="header-text childrens-ministry">
+                <i class="icon icon-inline icon-commons-childrens"></i>
+                <p class="header-inline">
+                    Parents
+                </p>
+            </div>
+            <p class="no-margin">
+                We have a Children's Ministry and Nursery on Sunday mornings.
+                Through singing, games, lessons, activities, and crafts, we hope
+                to cultivate and encourage spiritual growth in your children.
+                All childcare workers have been trained and have undergone
+                background checks to ensure your child's safety.
             </p>
         </div>
     </div>
@@ -620,6 +635,9 @@
 </script>
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="libs/jquery-scrollspy/js/scrollspy.js"></script>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
 <script src="libs/lightbox/js/ekko-lightbox.js"></script>
 <script type="text/javascript">
     $(document).ready(function ($) {
