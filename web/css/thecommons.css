@@ -156,7 +156,7 @@ html {
 }
 
 .multilingual-bg {
-    background: url(../img/carousel/cross.jpg) no-repeat top center scroll;
+    background: url(../img/carousel/postcard.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
