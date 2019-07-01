@@ -92,9 +92,7 @@
         </li>
         <li>
             <a href="#partnership">
-                <div class="icon">
-                    <i class="icon icon-commons-mission"></i>
-                </div>
+                <div class="icon"><span class="glyphicon glyphicon-refresh"></span></div>
                 <div class="text">
                     Our FBCNC Partnership
                 </div>
@@ -110,6 +108,7 @@
                 </div>
             </a>
         </li>
+        <!--
         <li>
             <a href="#collectivos">
                 <div class="icon">
@@ -120,6 +119,7 @@
                 </div>
             </a>
         </li>
+        -->
         <li>
             <a href="#calendar">
                 <div class="icon">
@@ -202,7 +202,7 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    <div class="tc-panel row sundays-bg" id="sundays">
+    <div class="tc-panel row blue-bg" id="sundays">
         <div class="col-sm-6" id="mapbox">
             <div id="map"></div>
         </div>
@@ -262,11 +262,8 @@
     </div>
     <div class="clearfix"></div>
     <div class="tc-panel row" id="whoweare">
-        <div class="col-sm-6">
-            welcome video goes here
-        </div>
-        <div class="col-sm-6">
-            <p class="header-text">
+        <div class="col-sm-6 blue-bg">
+            <p class="header-text invert">
                 Welcome to The Commons Church
             </p>
 
@@ -292,10 +289,13 @@
             </p>
 
             <p class="pull-right">
-                &mdash; From Seth &amp; Jon
+                &mdash; From Pastors Seth &amp; Jon
             </p>
 
-            <p class="body-text invert-text ecclesia">
+            <div class="clearfix"></div>
+
+            <div class="affiliations">
+            <p class="body-text ecclesia">
                 The Commons is part of the
                 <a href="http://ecclesianet.org/" target="_blank"><img
                         src="img/ecclesia-logo.png"/></a>
@@ -311,13 +311,15 @@
                     <i class="icon-angle-right"></i>
                 </a>
             </p>
+            </div>
 
             <div class="welcome-spacer"></div>
         </div>
+        <div class="col-sm-6 welcome-bg hidden-xs"></div>
     </div>
     <div class="clearfix"></div>
     <div class="tc-panel row" id="partnership">
-        <div class="col-sm-6 why-bg">
+        <div class="col-sm-6">
             <p class="header-text">
                 <i class="icon icon-commons-mission">
                 </i>
@@ -325,7 +327,7 @@
             <p class="header-text">
                 FBCNC and Our Unique Partnership
             </p>
-            <p class="body-text invert-text">
+            <p class="body-text">
                 Those of us from FBCNC share 130 years of stories of this
                 community and have an embodied multiethnic church life. The
                 journey for The Commons Church began just 7 years ago in
@@ -344,9 +346,9 @@
                 faith,
                 Christianity that cares more about a big house than a big
                 heart,
-                and churches that want to stay the same because that’s what
+                and churches that want to stay the same because that's what
                 feels comfortable. This is a unique adventure. We are on the
-                front lines of the Spirit’s work in our culture. God is
+                front lines of the Spirit's work in our culture. God is
                 moving
                 us to partner, to reconcile, to get out of our comfort
                 zones,
@@ -362,17 +364,18 @@
             </p>
             <div class="mission-spacer visible-xs"></div>
         </div>
-        <div class="col-sm-6 why-bg">
-            <p class="header-text">
-                <i class="icon icon-commons-mission">
-                </i>
-            </p>
-            <p class="header-text">
-                Multilingual Legacy Service
-            </p>
-            <p class="body-text invert-text">
-                TODO
-            </p>
+        <div class="col-sm-6 multilingual-bg">
+            <div class="underline">
+                <p class="header-text">
+                    Multilingual Legacy Service
+                </p>
+            </div>
+            <div class="header-text">
+                <i class="icon icon-inline icon-commons-gathering"></i>
+                <p class="header-inline">
+                    11:00AM @ First Baptist Church of National City
+                </p>
+            </div>
             <div class="mission-spacer visible-xs"></div>
         </div>
     </div>
@@ -418,6 +421,7 @@
         </div>
     </div>
     <div class="clearfix"></div>
+    <!--
     <div class="tc-panel row" id="collectivos">
         <div class="col-sm-12 events-bg">
             <div class="col-sm-6">
@@ -433,6 +437,7 @@
         </div>
     </div>
     <div class="clearfix"></div>
+    -->
     <div class="tc-panel row" id="calendar">
         <div class="col-sm-12">
             <div class="underline">
@@ -591,6 +596,29 @@
             <div class="modal-body">
                 <p>Your donation was cancelled.<br>
                     If this was an accident, you can go back <a href="#give">here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="landing-alert" class="modal fade" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header header-text">
+                <button type="button" class="close"
+                        data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title">Welcome!</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Come and join us on Sunday August 11th 2019 for our first service.
+                </p>
+                <p>
+                    We can't wait to meet you!
+                </p>
             </div>
         </div>
     </div>

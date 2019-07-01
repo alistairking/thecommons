@@ -143,8 +143,24 @@ html {
     height: 200px;
 }
 
-.sundays-bg {
+.blue-bg {
     background-color: #52b5c8;
+}
+
+.welcome-bg {
+    background: url(../img/carousel/palm2.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.multilingual-bg {
+    background: url(../img/carousel/cross.jpg) no-repeat top center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .XXX-example-bg {
@@ -181,6 +197,14 @@ html {
     height: 50%;
 }
 
+.affiliations {
+    padding-top: 20px;
+}
+
+.ecclesia {
+    padding-bottom: 10px;
+}
+
 .ecclesia img {
     height: 21px;
     vertical-align: top;
@@ -210,7 +234,8 @@ html {
 }
 
 .logo-img {
-    height: 90%;
+    max-width: 90%;
+    max-height: 90%;
     vertical-align: middle;
 }
 
@@ -567,6 +592,17 @@ a.text-link > span {
 .col-xs-height {
     display: table-cell;
     float: none !important;
+}
+
+.modal-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.modal-body > p {
+    text-align: center;
+    font-size: 30px;
 }
 
 /* tweaks for lightbox */
