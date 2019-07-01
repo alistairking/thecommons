@@ -257,6 +257,10 @@ html {
     vertical-align: middle;
 }
 
+.header-text.invert {
+    color: #fff;
+}
+
 .std-text {
     color: #231f20;
 }
@@ -314,7 +318,7 @@ a.text-link > span {
     padding-left: 5%;
     padding-right: 5%;
     color: #fff;
-    color: #52b5c8;
+    /*color: #52b5c8;*/
 }
 
 .mission-text-top {

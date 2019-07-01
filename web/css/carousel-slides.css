@@ -7,7 +7,7 @@
 }
 
 .carousel .item:nth-child(2) {
-    background: url(../img/carousel/communion.jpg) no-repeat center center scroll;
+    background: url(../img/carousel/church2.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
