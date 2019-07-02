@@ -144,7 +144,7 @@ html {
 }
 
 .welcome-video-panel {
-    background: url(../img/carousel/palm2.jpg) no-repeat bottom center scroll;
+    background: url(../img/backgrounds/welcome-video.png) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -185,6 +185,15 @@ html {
     height: auto;
 }
 
+.colectivos-bg {
+    background: url(../img/backgrounds/colectivo.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
 .colectivos-right {
     height: 100%;
     text-align: center;
@@ -192,7 +201,7 @@ html {
 
 .colectivos-right p {
     text-transform: uppercase;
-    color: #fff;
+    color: #231f20;
     font-size: 48px;
 }
 
@@ -206,7 +215,7 @@ html {
 }
 
 .multilingual-bg {
-    background: url(../img/carousel/postcard.jpg) no-repeat bottom center scroll;
+    background: url(../img/backgrounds/postcard.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
