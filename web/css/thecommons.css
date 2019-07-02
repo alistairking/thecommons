@@ -185,6 +185,22 @@ html {
     height: auto;
 }
 
+.colectivos-right {
+    height: 100%;
+    text-align: center;
+}
+
+.colectivos-right p {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 48px;
+}
+
+.colectivos-right p.header-text {
+    font-size: 60px;
+    font-weight: 700; /* heavy */
+}
+
 .blue-bg {
     background-color: #52b5c8;
 }
@@ -326,6 +342,8 @@ html {
 }
 
 .middle-parent {
+    height: 100%;
+    width: 100%;
     display: table;
     table-layout: fixed;
 }
