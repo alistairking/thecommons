@@ -15,7 +15,7 @@
 }
 
 .carousel .item:nth-child(3) {
-    background: url(../img/carousel/no-sermon.jpg) no-repeat center right scroll;
+    background: url(../img/carousel/carshow-chalk.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
